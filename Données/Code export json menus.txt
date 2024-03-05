@@ -1,0 +1,78 @@
+function generateStructuredJson() {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('MENU');
+
+  var range = sheet.getDataRange();
+  var values = range.getValues();
+  var structuredData = {};
+  
+  // Ignorer l'en-tête en commençant par la deuxième ligne
+  for (var i = 1; i < values.length; i++) {
+    var row = values[i];
+    var debutSemaine = row[0];
+    var finSemaine = row[1];
+    var jour = row[2];
+    var date = row[3];
+    var recetteGlobale = row[4];
+    var recette = row[5];
+    var poids = row[6];
+    var dpa = row[7];
+    var typeAliment = row[8];
+    
+    if (debutSemaine && finSemaine) { // Vérifier si la ligne n'est pas vide
+      if (!structuredData[debutSemaine]) {
+        structuredData[debutSemaine] = {
+          "debut_semaine": debutSemaine,
+          "fin_semaine": finSemaine,
+          "jours": {}
+        };
+      }
+      
+      if (!structuredData[debutSemaine]["jours"][jour]) {
+        structuredData[debutSemaine]["jours"][jour] = {
+          "jour": jour,
+          "date": date,
+          "recettes": {}
+        };
+      }
+      
+      if (!structuredData[debutSemaine]["jours"][jour]["recettes"][recetteGlobale]) {
+        structuredData[debutSemaine]["jours"][jour]["recettes"][recetteGlobale] = {
+          "RecetteGlobale": recetteGlobale,
+          "details": []
+        };
+      }
+      
+      structuredData[debutSemaine]["jours"][jour]["recettes"][recetteGlobale]["details"].push({
+        "Recette": recette,
+        "Poids": poids,
+        "DPA": dpa,
+        "Type aliment": typeAliment
+      });
+    }
+  }
+  
+  // Convertir l'objet structuré en tableau pour le JSON
+  var outputArray = Object.keys(structuredData).map(function(semaineKey) {
+    var semaineData = structuredData[semaineKey];
+    var joursArray = Object.keys(semaineData.jours).map(function(jourKey) {
+      var jourData = semaineData.jours[jourKey];
+      var recettesArray = Object.keys(jourData.recettes).map(function(recetteKey) {
+        return jourData.recettes[recetteKey];
+      });
+      
+      jourData.recettes = recettesArray;
+      return jourData;
+    });
+    
+    semaineData.jours = joursArray;
+    return semaineData;
+  });
+  
+  // Convertir en JSON
+  var jsonOutput = JSON.stringify(outputArray, null, 2);
+  Logger.log(jsonOutput);
+  
+  // Optionnel: Écrire dans un fichier sur Google Drive
+  DriveApp.createFile('donnees_menus.json', jsonOutput);
+}
+
