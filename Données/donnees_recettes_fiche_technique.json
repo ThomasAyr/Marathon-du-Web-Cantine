@@ -1,0 +1,1967 @@
+[
+  {
+    "Intitule_recette": "Graisse canard*",
+    "details": [
+      {
+        "Ingredients": "graisse canard (6g/pers)",
+        "Composition": 0.66,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "Oignon/baie genièvre (23g/p)",
+        "Composition": 2.37,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "sel",
+        "Composition": 0.03,
+        "DPA": 2
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Béchamel*",
+    "details": [
+      {
+        "Ingredients": "beurre, creme épaisse, sel",
+        "Composition": 0.764,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "lait noix muscade/poivre",
+        "Composition": 3.61,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "liant knorr",
+        "Composition": 2,
+        "DPA": 4
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Béchamel F*",
+    "details": [
+      {
+        "Ingredients": "lait,noix muscade/poivre",
+        "Composition": 3.51,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "liant knorr",
+        "Composition": 2,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "Emmental",
+        "Composition": null,
+        "DPA": 3
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "beurre/creme épaisse",
+    "details": [
+      {
+        "Ingredients": "",
+        "Composition": 0.78,
+        "DPA": 2
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Bouillon légumes*",
+    "details": [
+      {
+        "Ingredients": "concentré légumes liquide",
+        "Composition": 0.5,
+        "DPA": 4
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Boulghour (champignons)*",
+    "details": [
+      {
+        "Ingredients": "huile vierge extra",
+        "Composition": 0.45,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "huile friture",
+        "Composition": 0.45,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "Oignons/champi",
+        "Composition": 2,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "boulgour",
+        "Composition": null,
+        "DPA": 1
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Brandade de morue*",
+    "details": [
+      {
+        "Ingredients": "brandade fraiche",
+        "Composition": 8.7,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "Lait, poivre, persil, ail",
+        "Composition": 9.58,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Purée pdt flocon bio",
+        "Composition": 2.5,
+        "DPA": 3
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Chou vert braisé et pomme de terre*",
+    "details": [
+      {
+        "Ingredients": "légumes",
+        "Composition": 2.16,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "concentré liquide",
+        "Composition": 0.15,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "huile olive vierge",
+        "Composition": 0.3,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "tomate boite",
+        "Composition": 1.2,
+        "DPA": 3
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Crème moutarde*",
+    "details": [
+      {
+        "Ingredients": "Beurre/creme épaisse/moutarde",
+        "Composition": 187,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "oignons/ail",
+        "Composition": 104,
+        "DPA": 1
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Flageolets cuisinés*",
+    "details": [
+      {
+        "Ingredients": "beurre",
+        "Composition": 0.7,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "persil/oignons/ail/poivre",
+        "Composition": 1.25,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "sel",
+        "Composition": 0.03,
+        "DPA": 2
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Garniture légumes frais",
+    "details": [
+      {
+        "Ingredients": "Concombre",
+        "Composition": 1,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Garniture taboulé",
+        "Composition": 3,
+        "DPA": 3
+      },
+      {
+        "Ingredients": "Huile d'olive",
+        "Composition": 0.35,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "Jus de citron/persil",
+        "Composition": 0.55,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Tomate",
+        "Composition": 1,
+        "DPA": 1
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Garniture taboulé légumes frais*",
+    "details": [
+      {
+        "Ingredients": "Concombre",
+        "Composition": 1,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Garniture taboulé",
+        "Composition": 3,
+        "DPA": 3
+      },
+      {
+        "Ingredients": "Huile d'olive",
+        "Composition": 0.35,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "Jus de citron/persil",
+        "Composition": 0.55,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Tomate",
+        "Composition": 1,
+        "DPA": 1
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Gnocchis*",
+    "details": [
+      {
+        "Ingredients": "beurre",
+        "Composition": 0.75,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "lait",
+        "Composition": null,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "semoule",
+        "Composition": 3,
+        "DPA": 1
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Gratin dauphinois*",
+    "details": [
+      {
+        "Ingredients": "pdt lamelles, lait, muscade/poivre",
+        "Composition": null,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "creme épaisse",
+        "Composition": 0.46,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "Emmental",
+        "Composition": 1.5,
+        "DPA": 3
+      },
+      {
+        "Ingredients": "sauce hollandaise",
+        "Composition": 0.06,
+        "DPA": 4
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Huile d'olive basilic*",
+    "details": [
+      {
+        "Ingredients": "Basilic coupé surgelé",
+        "Composition": 0.043,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Huile d'olive, vierge extra",
+        "Composition": 0.85,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "Huile friture",
+        "Composition": 0.03,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "Poivre gris moulu",
+        "Composition": 0.003,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Sel fin",
+        "Composition": 0.027,
+        "DPA": 2
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Huile d'olive basilic citron*",
+    "details": [
+      {
+        "Ingredients": "Basilic coupé surgelé",
+        "Composition": 0.043,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Huile d'olive, vierge extra",
+        "Composition": 0.85,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "Huile friture",
+        "Composition": 0.03,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "Poivre gris moulu",
+        "Composition": 0.003,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Sel fin",
+        "Composition": 0.027,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "Jus de citron",
+        "Composition": 0.07,
+        "DPA": 1
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Huile olive basilic*",
+    "details": [
+      {
+        "Ingredients": "Basilic coupé surgelé",
+        "Composition": 0.043,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Huile d'olive, vierge extra",
+        "Composition": 0.85,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "Huile friture",
+        "Composition": 0.03,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "Poivre gris moulu",
+        "Composition": 0.003,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Sel fin",
+        "Composition": 0.027,
+        "DPA": 2
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Jus épices*",
+    "details": [
+      {
+        "Ingredients": "légumes et aromates",
+        "Composition": null,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Huile olive vierge extra",
+        "Composition": 0.35,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "concentré volaille",
+        "Composition": 0.15,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "Tomates concassé",
+        "Composition": 2.5,
+        "DPA": 3
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Lentilles préparés (boîte)*",
+    "details": [
+      {
+        "Ingredients": "ail/carottes/celeri/oignons/poireaux",
+        "Composition": null,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "cocnentré légumes liquide",
+        "Composition": 0.15,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "huile olive extra vierge/sel",
+        "Composition": 0.31,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "Tomate concentré + Tomates concassées",
+        "Composition": 1.7,
+        "DPA": 3
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Mélange lentilles/boulgour et dés carottes et courgettes",
+    "details": [
+      {
+        "Ingredients": "Boulgour et lentilles (cuit)",
+        "Composition": 10.9,
+        "DPA": 3
+      },
+      {
+        "Ingredients": "Courgette",
+        "Composition": 5.45,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Huile d'olive",
+        "Composition": 0.7,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "Carottes",
+        "Composition": 5.45,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Poivre",
+        "Composition": 0.003,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Sel",
+        "Composition": 0.03,
+        "DPA": 2
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Muesli",
+    "details": [
+      {
+        "Ingredients": "amande",
+        "Composition": 0.5,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Jus de citron",
+        "Composition": 0,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Miel",
+        "Composition": 0.5,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "pois chiche",
+        "Composition": 1,
+        "DPA": 3
+      },
+      {
+        "Ingredients": "Raisin secs",
+        "Composition": 0.5,
+        "DPA": 1
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Omelette au fromage*",
+    "details": [
+      {
+        "Ingredients": "emmental rapé",
+        "Composition": 0.94,
+        "DPA": 3
+      },
+      {
+        "Ingredients": "huile friture",
+        "Composition": 0.36,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "œuf liquide, jus citron",
+        "Composition": 8.37,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "emmental rapé",
+        "Composition": 0.94,
+        "DPA": 3
+      },
+      {
+        "Ingredients": "huile friture",
+        "Composition": 0.36,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "œuf liquide, jus citron",
+        "Composition": 8.37,
+        "DPA": 1
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Omelette aux champignons*",
+    "details": [
+      {
+        "Ingredients": "ŒUFS/Champignon",
+        "Composition": 10.75,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Huile friture",
+        "Composition": 0.36,
+        "DPA": 2
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Omelette aux oignons*",
+    "details": [
+      {
+        "Ingredients": "huile olive",
+        "Composition": 0.36,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "ŒUFS",
+        "Composition": 8.5,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "oignons",
+        "Composition": 2,
+        "DPA": 1
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Omelette nature*",
+    "details": [
+      {
+        "Ingredients": "huile friture/sel",
+        "Composition": 0.4,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "œuf liquide",
+        "Composition": 9.14,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "jus citron",
+        "Composition": 0.06,
+        "DPA": 1
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Omelette portuguaise*",
+    "details": [
+      {
+        "Ingredients": "Huile friture",
+        "Composition": 0.36,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "Œuf entier liquide",
+        "Composition": null,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Oignons",
+        "Composition": 0.4,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "poivrons rouges",
+        "Composition": 1.76,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Tomates concassées",
+        "Composition": 0.88,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "sel",
+        "Composition": 0.03,
+        "DPA": 2
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Omlette portugaise*",
+    "details": [
+      {
+        "Ingredients": "Huile friture",
+        "Composition": 0.36,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "Œuf entier liquide",
+        "Composition": null,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Oignons",
+        "Composition": 0.4,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "poivrons rouges",
+        "Composition": 1.76,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Tomates concassées",
+        "Composition": 0.88,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "sel",
+        "Composition": 0.03,
+        "DPA": 2
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Parmentier de cabillaud*",
+    "details": [
+      {
+        "Ingredients": "lait, ail, persil, poivre, Filet cabillaud",
+        "Composition": 17.15,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "purée chou fleur",
+        "Composition": 1.94,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "purée flocons",
+        "Composition": 3.39,
+        "DPA": 3
+      },
+      {
+        "Ingredients": "Sel",
+        "Composition": 0.03,
+        "DPA": 2
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Petits pois cuisinés*",
+    "details": [
+      {
+        "Ingredients": "Ail/carottes/celeri/oignon/poireaux",
+        "Composition": 2.32,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "concentré légume liquide",
+        "Composition": 0.17,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "huile olive vierge extra",
+        "Composition": 0.46,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "sel",
+        "Composition": null,
+        "DPA": null
+      },
+      {
+        "Ingredients": "légumes +aromates",
+        "Composition": 2.33,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "concentré liquide",
+        "Composition": 0.15,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "Huile olive/ SEL",
+        "Composition": 0.48,
+        "DPA": 2
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Polenta*",
+    "details": [
+      {
+        "Ingredients": "beurre",
+        "Composition": 0.53,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "concentré légumes",
+        "Composition": 0.15,
+        "DPA": 4
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Purée de carottes*",
+    "details": [
+      {
+        "Ingredients": "beurre/sel",
+        "Composition": 0.63,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "lait, purée carottes",
+        "Composition": 9.87,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "purée pdt flocon",
+        "Composition": 1.2,
+        "DPA": 3
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Purée de céleri*",
+    "details": [
+      {
+        "Ingredients": "beurre, sel",
+        "Composition": 0.62,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "lait, purée celeri",
+        "Composition": 8.85,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "purée flocon pdt",
+        "Composition": 1.2,
+        "DPA": 3
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Purée de chou-fleur*",
+    "details": [
+      {
+        "Ingredients": "beurre, sel",
+        "Composition": 0.62,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "lait, purée ch fleur",
+        "Composition": 9.85,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "purée flocon pdt",
+        "Composition": 1.2,
+        "DPA": 1
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Purée de courge*",
+    "details": [
+      {
+        "Ingredients": "beurre, sel",
+        "Composition": 0.62,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "lait, courge",
+        "Composition": 9.85,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "purée flocon pdt",
+        "Composition": 1.2,
+        "DPA": 1
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Purée de pomme de terre*",
+    "details": [
+      {
+        "Ingredients": "purée flocons BIO",
+        "Composition": 2.91,
+        "DPA": 3
+      },
+      {
+        "Ingredients": "beurre/sel",
+        "Composition": 0.79,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "lait/noix muscade",
+        "Composition": 15.92,
+        "DPA": 1
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Purée de pomme de terre (fraîche)*",
+    "details": [
+      {
+        "Ingredients": "Lait demi-écrémé",
+        "Composition": 5.53,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Beurre",
+        "Composition": 0.55,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "Poivre gris moulu",
+        "Composition": 0.035,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Pomme de terre lammelles (4ème gamme)",
+        "Composition": 22,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Sel",
+        "Composition": 0.35,
+        "DPA": 2
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Purée de potiron*",
+    "details": [
+      {
+        "Ingredients": "beurre/sel",
+        "Composition": 0.62,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "lait, purée potiron",
+        "Composition": 8.3,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "purée pdt flocon",
+        "Composition": 1.2,
+        "DPA": 3
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Ratatouille (maison)",
+    "details": [
+      {
+        "Ingredients": "légumes surgelés",
+        "Composition": 8.83,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "boite tomate",
+        "Composition": 1.7,
+        "DPA": 3
+      },
+      {
+        "Ingredients": "huile olive vierge extra, laurier, sel",
+        "Composition": 0.37,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "légumes surgelés",
+        "Composition": 8.84,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "boite tomate",
+        "Composition": 1.7,
+        "DPA": 3
+      },
+      {
+        "Ingredients": "huile olive vierge extra",
+        "Composition": 0.34,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "sel",
+        "Composition": 0.02,
+        "DPA": 2
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Ratatouille maison*",
+    "details": [
+      {
+        "Ingredients": "légumes surgelés",
+        "Composition": 8.84,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "boite tomate",
+        "Composition": 1.7,
+        "DPA": 3
+      },
+      {
+        "Ingredients": "huile olive vierge extra",
+        "Composition": 0.34,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "sel",
+        "Composition": 0.02,
+        "DPA": 2
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce à la crème",
+    "details": [
+      {
+        "Ingredients": "Ail/persil/poivre",
+        "Composition": 10.3,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Beurre/crème/sel",
+        "Composition": 203,
+        "DPA": 2
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce à la crème*",
+    "details": [
+      {
+        "Ingredients": "Ail/persil/poivre",
+        "Composition": 10.3,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Beurre/crème/sel",
+        "Composition": 203,
+        "DPA": 2
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce abricots*",
+    "details": [
+      {
+        "Ingredients": "légumes + épices/aromates + abricot sec",
+        "Composition": null,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "cocnentré viande liquide/liant knorr",
+        "Composition": 1.15,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "sel",
+        "Composition": 0.03,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "tomate concassé + cocnentré",
+        "Composition": null,
+        "DPA": 3
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce aux olives*",
+    "details": [
+      {
+        "Ingredients": "ail/carottes/celeri/oignons/poireaux/sel, poivre, herbes/laurier",
+        "Composition": 2.55,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "cocnentré viande liquide/liant knorr",
+        "Composition": 2.16,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "olives vertes",
+        "Composition": 1.82,
+        "DPA": 3
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce basquaise*",
+    "details": [
+      {
+        "Ingredients": "ail/carottes/celeri/oignons/poivrons, herbes + laurier",
+        "Composition": null,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "concentré bœuf/veau/volaille liquide",
+        "Composition": 0.15,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "huile olive vierge extra, sel/sucre/poivre",
+        "Composition": 0.43,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "tomate concassé/concentré",
+        "Composition": null,
+        "DPA": 3
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce béarnaise*",
+    "details": [
+      {
+        "Ingredients": "beurre/ sel",
+        "Composition": 1.3,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "ciboulette/persil/jus citron",
+        "Composition": 0.14,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "sauce bearnaise",
+        "Composition": 0.38,
+        "DPA": 4
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "sauce bernaise",
+    "details": [
+      {
+        "Ingredients": "beurre/ sel",
+        "Composition": 1.3,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "ciboulette/persil/jus citron",
+        "Composition": 0.14,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "sauce bearnaise",
+        "Composition": 0.38,
+        "DPA": 4
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce beurre citronné*",
+    "details": [
+      {
+        "Ingredients": "beurre citronné, sel",
+        "Composition": 0.83,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "jus citron, poivre",
+        "Composition": 0.07,
+        "DPA": 1
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce blanquette*",
+    "details": [
+      {
+        "Ingredients": "ail/carotte/champi/poireau/oignon, jus citron, lait, épices",
+        "Composition": 3.96,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "concentré volaille/ liant knorr/ sauce hollandaise",
+        "Composition": 2.21,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "creme épaisse, Sel",
+        "Composition": 0.72,
+        "DPA": 2
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "sauce bouillon",
+    "details": [
+      {
+        "Ingredients": "beurre",
+        "Composition": 0.53,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "concentré légumes",
+        "Composition": 0.15,
+        "DPA": 4
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce bourride*",
+    "details": [
+      {
+        "Ingredients": "ail/carottes/echalotte/poireaux/épinard",
+        "Composition": 1.77,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "concentré langoustine/poisson/liant knorr/sauce hollandaise/mayo",
+        "Composition": 2.59,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "creme épaisse, sel/poivre",
+        "Composition": 0.39,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "riz d'or boite",
+        "Composition": 0.01,
+        "DPA": 1
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce carbonara*",
+    "details": [
+      {
+        "Ingredients": "concentré veau/vol liquide/Liant knorr/ Sauce hollandaise",
+        "Composition": 45,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "creme épaisse, sel",
+        "Composition": 0.188,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "Echalotte/oignon, lait",
+        "Composition": 3.32,
+        "DPA": 1
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce champignons*",
+    "details": [
+      {
+        "Ingredients": "concentré viande",
+        "Composition": 0.15,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "creme épaisse/sel",
+        "Composition": 0.6,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "lait",
+        "Composition": 0.29,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Légumes + aromate +poivre",
+        "Composition": 2.43,
+        "DPA": 1
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce charcutière*",
+    "details": [
+      {
+        "Ingredients": "carottes/celeri/aromates",
+        "Composition": 1.47,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "huile olive vierge extra, sel,moutarde",
+        "Composition": 0.69,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "concentré bœuf/veau/volaille liquide/liant knorr",
+        "Composition": 2.15,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "cornichons",
+        "Composition": 0.69,
+        "DPA": 3
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce cocktail*",
+    "details": [
+      {
+        "Ingredients": "Ciboulette/jus de citron",
+        "Composition": 1,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Ketchup",
+        "Composition": 1.5,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "Mayonnaise",
+        "Composition": 1.5,
+        "DPA": 4
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce crème champignon*",
+    "details": [
+      {
+        "Ingredients": "concentré viande",
+        "Composition": 0.15,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "creme épaisse/sel",
+        "Composition": 0.6,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "lait",
+        "Composition": 0.29,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Légumes + aromate +poivre",
+        "Composition": 2.43,
+        "DPA": 1
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce crème champignons*",
+    "details": [
+      {
+        "Ingredients": "concentré viande",
+        "Composition": 0.15,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "creme épaisse/sel",
+        "Composition": 0.6,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "lait",
+        "Composition": 0.29,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Légumes + aromate +poivre",
+        "Composition": 2.43,
+        "DPA": 1
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce curry*",
+    "details": [
+      {
+        "Ingredients": "creme épaisse, sel",
+        "Composition": 0.63,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "légumes, curry,laurier,",
+        "Composition": 2.37,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "liant knorr",
+        "Composition": 1.65,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "Tomate concassée/concentrée",
+        "Composition": 1.56,
+        "DPA": 3
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce dahl*",
+    "details": [
+      {
+        "Ingredients": "Cumin/curry/Poivre",
+        "Composition": 0.203,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Sel",
+        "Composition": 0.03,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "Sauce tomate",
+        "Composition": 4.65,
+        "DPA": 3
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce dijonnaise*",
+    "details": [
+      {
+        "Ingredients": "carottes/celeri/oignons/poireaux",
+        "Composition": 1.89,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "concentré bœuf/veau liquide, liant knorr",
+        "Composition": 2.15,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "creme épaisse, Huile olive vierge extra, sel",
+        "Composition": 0.6,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "Moutarde",
+        "Composition": 0.28,
+        "DPA": 3
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce fafa*",
+    "details": [
+      {
+        "Ingredients": "concentré volaille",
+        "Composition": 0.15,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "épinard, oignon, noix coco, ail",
+        "Composition": 6.65,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "sel",
+        "Composition": 0.03,
+        "DPA": 2
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce gardianne*",
+    "details": [
+      {
+        "Ingredients": "ail/carottes/celeri/oignons",
+        "Composition": null,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "cocnentré viande liquide/Liant knorr",
+        "Composition": 2.15,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "huile olive vierge extra/sel",
+        "Composition": 0.35,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "Olives noires rondelles + tomates boite",
+        "Composition": 1.9,
+        "DPA": 3
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce goulash*",
+    "details": [
+      {
+        "Ingredients": "légumes+aromates+épices",
+        "Composition": 2.7,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "liant knorr, concentré liquide",
+        "Composition": 2.15,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "huile olive, sel",
+        "Composition": 0.48,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "tomate boite",
+        "Composition": 1.88,
+        "DPA": 3
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce gratin*",
+    "details": [
+      {
+        "Ingredients": "ail/carottes/champi/poireaux/laurier/moules/lait",
+        "Composition": 3.16,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "creme épaisse, sel",
+        "Composition": 0.5,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "concentré poisson/sauce hollandaise/liant knorr/soupe poisson",
+        "Composition": 2.24,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "Emmental rapé",
+        "Composition": 1.13,
+        "DPA": 3
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce gratin épinards*",
+    "details": [
+      {
+        "Ingredients": "beurre/creme épaisse/sel",
+        "Composition": 0.76,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "lait,noix muscade/poivre",
+        "Composition": 3.61,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "liant knorr",
+        "Composition": 2,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "Emmental rapé",
+        "Composition": null,
+        "DPA": 3
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce gratin poisson*",
+    "details": [
+      {
+        "Ingredients": "ail/carottes/champi/poireaux/laurier + moules + lait",
+        "Composition": 3.16,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "concentré poisson/sauce hollandaise/liant knorr/soupe poisson",
+        "Composition": 2.24,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "creme épaisse/sel/beurre",
+        "Composition": 0.78,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "Emmental rapé",
+        "Composition": 1.13,
+        "DPA": 3
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce gribiche*",
+    "details": [
+      {
+        "Ingredients": "ciboulette, échalotte, estragon, poivre",
+        "Composition": 0.3,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "vinaigre vin, huile olive vierge, sel",
+        "Composition": 2.3,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "cornichons, moutarde,",
+        "Composition": 0.64,
+        "DPA": 3
+      },
+      {
+        "Ingredients": "vin blanc deshydraté",
+        "Composition": 0.1,
+        "DPA": 4
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce hollandaise*",
+    "details": [
+      {
+        "Ingredients": "Beurre/sel",
+        "Composition": 1.23,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "sauce hollandaise",
+        "Composition": 0.13,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "ciboulette/persil/poivre/jus citron",
+        "Composition": 0.14,
+        "DPA": 1
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce marengo*",
+    "details": [
+      {
+        "Ingredients": "ail/carottes/celeri/poireaux/oignons, paprika/poivre",
+        "Composition": 3.2,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "cocnentré veau/bœuf liquide/liant knorr",
+        "Composition": 2.15,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "Huile olive vierge extra, sel",
+        "Composition": 0.82,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "tomate concentré/tomate concassée",
+        "Composition": 1.63,
+        "DPA": 3
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce miel soja*",
+    "details": [
+      {
+        "Ingredients": "huile/sel/moutarde",
+        "Composition": 0.68,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "jus soja",
+        "Composition": 0.36,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "miel/oignons --> miel en 2",
+        "Composition": 2,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Liant knorr/concentré légumes",
+        "Composition": 2.15,
+        "DPA": 4
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce miroton*",
+    "details": [
+      {
+        "Ingredients": "liant knorr/concentré viande",
+        "Composition": 1.35,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "sel/Huile olive vi.extra/vinaigre vin",
+        "Composition": 0.57,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "tomate concassé et concentré",
+        "Composition": 1.64,
+        "DPA": 3
+      },
+      {
+        "Ingredients": "légumes + aromates",
+        "Composition": 1.73,
+        "DPA": 1
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce navarin*",
+    "details": [
+      {
+        "Ingredients": "ail/carottes/celeri/poireaux/oignons + poivre/laurier/paprika",
+        "Composition": 2.17,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "cocnentré veau/bœuf liquide/liant knorr",
+        "Composition": 2.32,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "sel",
+        "Composition": 0.03,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "tomate concentré + concassée",
+        "Composition": 1.88,
+        "DPA": 3
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce normande*",
+    "details": [
+      {
+        "Ingredients": "moules, ail/carottes/champi/poireaux, lait",
+        "Composition": 3.76,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "creme épaisse, sel",
+        "Composition": 0.4,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "concentré poisson,liant knorr,sauce hollandaise, soupe poisson",
+        "Composition": 2.21,
+        "DPA": 4
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce olives*",
+    "details": [
+      {
+        "Ingredients": "Concentré liquide/liant knorr",
+        "Composition": 2.15,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "tomate concassée",
+        "Composition": 1.2,
+        "DPA": 3
+      },
+      {
+        "Ingredients": "légumes",
+        "Composition": 2.52,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "huile olive/sel",
+        "Composition": 0.33,
+        "DPA": 2
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce olives vertes*",
+    "details": [
+      {
+        "Ingredients": "Concentré liquide/liant knorr",
+        "Composition": 2.15,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "tomate concassée",
+        "Composition": 1.2,
+        "DPA": 3
+      },
+      {
+        "Ingredients": "légumes",
+        "Composition": 2.52,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "huile olive/sel",
+        "Composition": 0.33,
+        "DPA": 2
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce paëlla*",
+    "details": [
+      {
+        "Ingredients": "encornets moules, ail, har verts, oignons, poivrons, petit pois",
+        "Composition": 4.72,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Concentré liquide/riz d'or/soupe poisson",
+        "Composition": 1.78,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "Tomates concentré+ concassé",
+        "Composition": 1.72,
+        "DPA": 3
+      },
+      {
+        "Ingredients": "sel",
+        "Composition": 0.03,
+        "DPA": 2
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce paprika*",
+    "details": [
+      {
+        "Ingredients": "légumes + aromates + poivre/paprika",
+        "Composition": null,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "cocnentré légumes/liant knorr",
+        "Composition": 2.15,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "tomate concentré + concassé",
+        "Composition": 1.63,
+        "DPA": 3
+      },
+      {
+        "Ingredients": "huile olive vierge, Sel",
+        "Composition": 0.85,
+        "DPA": 2
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce pommes*",
+    "details": [
+      {
+        "Ingredients": "légumes+ aromates/épices",
+        "Composition": 2.96,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Liant knorr/ Concentré liquide",
+        "Composition": 1.15,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "Tomate boite",
+        "Composition": null,
+        "DPA": 3
+      },
+      {
+        "Ingredients": "Sel",
+        "Composition": 0.03,
+        "DPA": 2
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce provençale*",
+    "details": [
+      {
+        "Ingredients": "celri/oignonsorigan/herbes provence",
+        "Composition": 1.77,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Concentré viande liquide",
+        "Composition": 0.15,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "Huile vierge extra, sel, sucre",
+        "Composition": 0.38,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "Tomate concentré",
+        "Composition": 1.69,
+        "DPA": 3
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce rouille*",
+    "details": [
+      {
+        "Ingredients": "Ail/carottes/celeri/echalottes/oignons/poireaux",
+        "Composition": 2.088,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Estragon/laurier/poivre/riz d'or",
+        "Composition": 0.13,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Concentré langoustine/poissons/lian korr/mayonnaise/soupe de poisson",
+        "Composition": 2.55,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "Crème/huile d'olive/sel",
+        "Composition": 0.78,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "tomate concentré et concassé",
+        "Composition": 1.9,
+        "DPA": 3
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce sétoise*",
+    "details": [
+      {
+        "Ingredients": "légumes/estragon",
+        "Composition": 2.16,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "tomate concassé + concentré",
+        "Composition": 1.9,
+        "DPA": 3
+      },
+      {
+        "Ingredients": "creme épaisse/huile olive vierge extra/sel",
+        "Composition": 0.81,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "liant knorr/soupe poisson maggi/concentré poisson",
+        "Composition": 2.23,
+        "DPA": 4
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce tomate*",
+    "details": [
+      {
+        "Ingredients": "légumes + herbes+ poivre",
+        "Composition": 2.18,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Huile olive vierge, sucre,sel",
+        "Composition": 0.334,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "concentré légumes",
+        "Composition": 0.15,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "tomate en boite",
+        "Composition": 1.53,
+        "DPA": 3
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Sauce tomates*",
+    "details": [
+      {
+        "Ingredients": "ail/carottes/celeri/oignons/poireaux + aromates",
+        "Composition": 2.3,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "cocnentré légumes liquide",
+        "Composition": 0.15,
+        "DPA": 4
+      },
+      {
+        "Ingredients": "huile olive extra vierge, sel, poivre, sucre",
+        "Composition": 0.34,
+        "DPA": 2
+      },
+      {
+        "Ingredients": "Tomate concentré + concassé",
+        "Composition": 1.54,
+        "DPA": 3
+      }
+    ]
+  },
+  {
+    "Intitule_recette": "Tortilla de pomme de terre*",
+    "details": [
+      {
+        "Ingredients": "Jus de citron/persil",
+        "Composition": 0.4,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Œufs",
+        "Composition": 9.14,
+        "DPA": 1
+      },
+      {
+        "Ingredients": "Pomme de terre rissolées",
+        "Composition": 16,
+        "DPA": 3
+      }
+    ]
+  }
+]

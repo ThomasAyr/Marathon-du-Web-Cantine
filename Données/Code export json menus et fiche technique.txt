@@ -44,8 +44,8 @@ function generateStructuredJson() {
       
       structuredData[debutSemaine]["jours"][jour]["recettes"][recetteGlobale]["details"].push({
         "Recette": recette,
-        "Poids": poids,
-        "DPA": dpa,
+        "Poids": parseFloat(poids),
+        "DPA": parseFloat(dpa),
         "Type aliment": typeAliment
       });
     }
@@ -74,5 +74,51 @@ function generateStructuredJson() {
   
   // Optionnel: Écrire dans un fichier sur Google Drive
   DriveApp.createFile('donnees_menus.json', jsonOutput);
+
+  generateStructuredJsonByRecipe();
+}
+
+
+function generateStructuredJsonByRecipe() {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('FICHE TECHNIQUE');
+  var range = sheet.getDataRange();
+  var values = range.getValues();
+  var structuredData = {};
+
+  // Ignorer l'en-tête en commençant par la deuxième ligne
+  for (var i = 1; i < values.length; i++) {
+    var row = values[i];
+    var recipeTitle = row[0]; // Intitule_recette
+    var ingredients = row[1]; // Ingredients
+    var weight = row[2]; // Poids
+    var dpa = row[3]; // DPA
+
+    if (recipeTitle) { // Vérifier si la ligne n'est pas vide
+      if (!structuredData[recipeTitle]) {
+        structuredData[recipeTitle] = {
+          "Intitule_recette": recipeTitle,
+          "details": []
+        };
+      }
+
+      structuredData[recipeTitle]["details"].push({
+        "Ingredients": ingredients,
+        "Composition": parseFloat(weight),
+        "DPA": parseFloat(dpa)
+      });
+    }
+  }
+
+  // Convertir l'objet structuré en tableau pour le JSON
+  var outputArray = Object.keys(structuredData).map(function(recipeKey) {
+    return structuredData[recipeKey];
+  });
+
+  // Convertir en JSON
+  var jsonOutput = JSON.stringify(outputArray, null, 2);
+  Logger.log(jsonOutput);
+
+  // Optionnel: Écrire dans un fichier sur Google Drive
+  DriveApp.createFile('donnees_recettes_fiche_technique.json', jsonOutput);
 }
 
