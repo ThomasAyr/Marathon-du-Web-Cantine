@@ -1,0 +1,283 @@
+body{
+	font-family: Arial;
+	background-color: #d8dd43;
+
+}
+
+
+
+h2{
+    font-size: 18px;
+    margin: 3px 0px 10px;
+}
+
+.headerSemaine{
+	font-size:25px;
+	margin: 10px 0px 22px;
+	color:#ee3439;
+	text-transform:uppercase;
+	font-weight: 900;
+}
+
+.semaine.active .headerSemaine{
+	color:#ee3439;
+}
+
+.semaine{
+    height: 212px;
+	margin-bottom: 10px;
+	width:100%;
+	margin:10px auto;
+	text-align: center;
+	display:none;
+}
+.semaine.active{
+	display:block;
+}
+.semaine.active .headerSemaine{
+    color:#ee3439;
+}
+h2.active{
+    color:#333;
+}
+.menu {
+    display: inline-table;
+    text-align: center;
+    height: 250px;
+    position: relative;
+    top: 0px;
+    width: 20%;
+    margin: 3px;
+    padding: 0px;
+	/* border: 1px #d8dd43 solid; */
+	background-color: white;
+}
+.int-menu{
+    margin: 0px 5px;
+    padding: 5px;
+    height: 100%;
+    position: absolute;
+	width: 90%;
+	color:#333;
+	font-size: 13px;
+	padding-top: 38px;
+	
+}
+
+.int-menu h2{
+	position: absolute;
+    top: -25px;
+    left: -5px;
+    width: 105%;
+    height: 38px;
+    background-size: cover;
+}
+
+.fleche {
+    display: inline-table;
+    text-align: center;
+    position: relative;
+    top: 300px;
+    cursor: pointer;
+    font-weight: bold;
+    position: absolute;
+    font-family: Arial;
+    font-size: 30px;
+    background-color: #ee3439;
+    padding: 14px 21px;
+    color:#FFF;
+    font-family: arial;
+    font-weight: bold;
+    border-radius: 100%;
+}
+
+.gauche{
+	left: 40px;
+}
+
+.droite{
+	right:40px;
+}
+
+.SOIR  {
+    display: inline-table;
+    text-align: center;
+    position: relative;
+    top: 480px;
+    cursor: pointer;
+    font-weight: bold;
+    position: absolute;
+    font-family: Arial;
+    font-size: 30px;
+	color:#FFF;
+    font-family: arial;
+    font-weight: bold;
+    border-radius: 100%;
+	left: 60px;
+}
+
+.Matin {
+    display: inline-table;
+    text-align: center;
+    position: relative;
+    top: 149px;
+    cursor: pointer;
+    font-weight: bold;
+    position: absolute;
+    font-family: Arial;
+    font-size: 30px;
+	color:#FFF;
+    font-family: arial;
+    font-weight: bold;
+    border-radius: 100%;
+	left: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.lundi h2{
+	/* background: linear-gradient(#7ae4da,#1fdcd6); */
+	    background-image: url(../Images/lundi.jpg);
+}
+.mardi h2{
+	/* background: linear-gradient(#ffd600,#feb300); */
+	    background-image: url(../Images/mardi.jpg);
+}
+.jeudi h2{
+	/* background: linear-gradient(#feb300,#fd4d71); */
+	    background-image: url(../Images/jeudi.jpg);
+}
+.vendredi h2{
+	/* background: linear-gradient(#feb440,#fb8137); */
+	    background-image: url(../Images/vendredi.jpg);
+}
+
+
+.titre_lundi{
+	color:#1fdcd6;
+}
+.titre_mardi{
+	color:#feb300;
+}
+.titre_jeudi{
+	color:#fd4d71;
+}
+.titre_vendredi{
+	color:#fb8137;
+}
+
+.substituts{
+    text-align: left;
+    /* color: #eee; */
+    font-size: 10px;
+    /* margin-top: 10px; */
+    position: absolute;
+    bottom: 45px;
+	z-index: 1;
+}
+
+.image-illustr{
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    bottom: 65px;
+    text-align: center;
+	opacity: 0.4;
+}
+.image-illustr img {
+    max-height: 100%;
+}
+
+sup {
+    font-size: 8px;
+}
+
+@media (max-width: 700px){
+	.menu {
+		display: block;
+		width:100%;
+		margin: 5px 0px;
+	}
+	.int-menu{
+		height:90%;
+		width:94%;
+	}
+	.gauche{
+		left: 21px;
+	}
+
+	.droite{
+		right:21px;
+	}
+	.headerSemaine{
+		font-size:16px;
+		padding: 0px 55px;
+	}
+	body{
+		padding-top: 0px;
+	}
+	.fleche {
+		top: 4px;
+		padding: 0px 10px;
+	}
+	.image-illustr{
+		bottom: 20%;
+	}
+	.lundi h2,.mardi h2,.jeudi h2,.vendredi h2{
+	    background-image: none;
+		top: 6px;
+	}
+	.lundi h2::after{
+	    content: "LUNDI";
+	}
+	.mardi h2::after{
+		content: "MARDI";
+	}
+	.jeudi h2::after{
+		content: "JEUDI";
+	}
+	.vendredi h2::after{
+		content: "VENDREDI";
+	}
+}
+
+#form-contenu{
+	text-align: left;
+    padding-left: 50px;
+}
+
+.classplat {
+    margin-bottom: 1px;
+	margin-bottom: 3px;
+}
+.classplat-aop{
+	color:#0879bd;
+}
+.classplat-pl{
+	color:#f47437;
+}
+.classplat-ab{
+	color:#44b75a;
+}
+
+.classplat-menu{
+	color:white;
+	font-weight:bold;
+	background-color:#963994;
+	padding:2px;
+}
+.classplat-ecole{
+	background-color:#01b0f1;
+}
+.classplat-vege{
+	background-color:#00a85a;
+}
