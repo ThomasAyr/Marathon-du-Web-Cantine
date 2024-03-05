@@ -1,0 +1,39 @@
+function generateJsonForEachRow() {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var range = sheet.getDataRange();
+  var values = range.getValues();
+  var allJsons = [];
+  
+  // Commencer par la deuxième ligne pour ignorer les en-têtes
+  for (var i = 1; i < values.length; i++) {
+    var row = values[i];
+    var rowObject = {};
+    var headers = values[0];
+    
+    // Créer un objet pour chaque colonne dans la ligne
+    for (var j = 0; j < headers.length; j++) {
+      var key = headers[j];
+      var value = row[j];
+
+      // Convertir en nombre si l'en-tête est l'un des suivants
+      if (key === "DPA (NOVA/Siga)" || key === "Degrè nocivité additifs" || key === "Nb MUT") {
+        value = (value === "") ? null : Number(value); // Convertit en nombre, utilise `null` pour les chaînes vides
+      }
+
+      rowObject[key] = value;
+    }
+    
+    // Convertir l'objet en chaîne JSON et l'ajouter au tableau allJsons
+    var jsonString = JSON.stringify(rowObject);
+    allJsons.push(jsonString);
+  }
+  
+  // Joindre tous les JSONs avec une nouvelle ligne entre eux
+  var allJsonsText = allJsons.join('\n');
+  
+  // Écrire dans un fichier sur Google Drive
+  var file = DriveApp.createFile('donnees_ingredients.json', allJsonsText);
+  
+  // Retourne l'URL du fichier pour accès facile
+  return file.getUrl();
+}
