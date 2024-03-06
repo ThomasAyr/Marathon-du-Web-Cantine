@@ -12,6 +12,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <style>
     .bg-secondary-custom {
@@ -20,9 +21,17 @@
     }
     .p_special {
       color:black;
-      
     }
-    
+
+  .desktop-only {
+    display: none;
+  }
+
+  @media (min-width: 412px) {
+    .desktop-only {
+      display: inline;
+    }
+  }
   </style>
 </head>
 </head>
@@ -33,8 +42,8 @@
     <nav class="navbar navbar-expand-sm navbar-dark bg-secondary-custom">
         <div class="container">
           <a class="navbar-brand d-flex align-items-center" href="index.html">
-            <img src="Logos/Montpellier.svg" alt="Montpellier Logo" style="height: 50px;"><img src="Logos/cantine.jpg" alt="Cantine Logo" style="height: 50px;">
-            <span class="font-weight-bold" style="color:#11499F;"> Ma Cantine Autrement !</span>
+            <img src="Logos/Montpellier.svg" alt="Montpellier Logo" style="height: 45px;"><img src="Logos/cantine.jpg" alt="Cantine Logo" style="height: 45px;">
+            <span class="font-weight-bold desktop-only" style="color:#11499F;"> Ma Cantine Autrement</span>
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -60,27 +69,32 @@
         <p class="lead">Notre site vous offre une <b>fenêtre transparente</b> sur nos pratiques d'approvisionnement locales, notre lutte contre les aliments ultra-transformés, et notre volonté de promouvoir le bien-manger dès le plus jeune âge.</p>
       </div>
 
+
+
       <div class="bg-secondary-custom text-white py-4">
-        <div class="container mt-5 mb-3">
+        <div class="container mt-4 mb-1">
           <div class="row">
-            <div class="col-sm-4 d-flex flex-column justify-content-between">
+            <div class="col-sm-4 d-flex flex-column justify-content-between mb-3">
               <h3 style="color:#b0b03b;"><i class="fa-solid fa-school"></i> <span id="restaurants-scolaires">0</span> restaurants scolaires dont 14 en self</h3>
               <p class="p_special">Chaque jour, les repas sont livrés en circuit direct dans les restaurants scolaires et selfs, assurant fraîcheur et qualité.</p>
             </div>
-            <div class="col-sm-4 d-flex flex-column justify-content-between">
-              <h3 style="color:#ff84fb;"><i class="fas fa-utensils" ></i> <span id="repas-mois" >0</span> <span ></span>repas produits par jour</h3>
+            <div class="col-sm-4 d-flex flex-column justify-content-between mb-3">
+              <h3 style="color:#ff84fb;"><i class="fas fa-utensils" ></i> <span id="repas-mois" >0</span> repas produits par jour</h3>
               <p class="p_special">Les repas sont préparés quotidiennement à Montpellier dans la cantine centrale de la Martelle.</p>
             </div>
-            <div class="col-sm-4 d-flex flex-column justify-content-between">
-              <h3 style="color: #59c859;"></h3style><i class="fas fa-seedling"></i> <span id="repas-bio">0</span>% de produits durables</h3>
+            <div class="col-sm-4 d-flex flex-column justify-content-between mb-3">
+              <h3 style="color: #59c859;"><i class="fas fa-seedling"></i> <span id="repas-bio">0</span>% de produits durables</h3>
               <p class="p_special">D'ici 2025, 100% de nos produits seront locaux et/ou durables, conformément à la loi EGALIM et notre politique.</p>
             </div>
           </div>
         </div>        
       </div>
+      
 
-      <div class="container mt-5 mb-3">
-        <img src="Images/graphe.png" alt="Avatar Logo" style="width:100%;" class="rounded-pill">
+      <div class="container mt-5 mb-4">
+        <div class="container mt-3">
+          <img src="Images/graphe.png" alt="Avatar Logo" style="width:100%;" class="rounded-pill">
+        </div>
       </div>
 
   </div>
@@ -89,7 +103,7 @@
 <br>
 <footer class="bg-success text-white py-4">
   <div class="container mb-3">
-    <h3 style="color:#c9e1af;">Six piliers pour une alimentation responsable</h3>
+    <h3 style="color:#c9e1af;"><i class="fas fa-utensils" ></i>  Six piliers pour une alimentation responsable</h3>
   </div>
     <div class="container">
       <div class="row">
