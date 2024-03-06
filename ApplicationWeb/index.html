@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>MA CANTINE AUTREMENT</title>
+  <title>Ma Cantine Autrement</title>
+  <link rel="icon" href="Logos/cantine.jpg" type="image/x-icon">
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,14 +12,29 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <style>
+    .bg-secondary-custom {
+      background-color: #c9e1af !important; /* Utilisez !important avec précaution */
+      
+    }
+    .p_special {
+      color:black;
+      
+    }
+    
+  </style>
 </head>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-success">
-        <div class="container-fluid">
+  <div class="banner-image" style="width: 100%; overflow: hidden;">
+    <img src="Images/bandeau.png" alt="Bandeau sur l'alimentation" style="width: 100%;">
+  </div>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-secondary-custom">
+        <div class="container">
           <a class="navbar-brand d-flex align-items-center" href="index.html">
-            <img src="./Montpellier.png" alt="Avatar Logo" style="width: 50px;" class="rounded-circle mr-2">
-            <span class="font-weight-bold">MA CANTINE AUTREMENT</span>
+            <img src="Logos/Montpellier.svg" alt="Montpellier Logo" style="height: 50px;"><img src="Logos/cantine.jpg" alt="Cantine Logo" style="height: 50px;">
+            <span class="font-weight-bold" style="color:#11499F;"> Ma Cantine Autrement !</span>
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -26,66 +42,118 @@
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" href="index.html">Accueil</a>
+                <a class="nav-link active" style="color: #11499F;" href="index.html">Zoom sur le projet</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./page/MENU.html">Menu</a>
+                <a class="nav-link" style="color: #11499F;" href="menu.html">Zoom sur les menus</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./page/repas.html">Générer un menu équilibré</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./page/Diagramme.html">%AUT</a>
+                <a class="nav-link" style="color: #11499F;" href="menu.html">Proposition de recettes</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
       
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-      <div class="container mt-5">
-        <h1 class="display-4 text-center">Nous vous souhaitons la bienvenue sur notre site "MA CANTINE AUTREMENT"</h1>
-        <p class="lead">Cette plateforme a été conçue spécifiquement pour les parents d'élèves fréquentant les écoles maternelles et primaires de Montpellier. Son objectif principal est de fournir des informations détaillées sur le degré de transformation (AUT) des repas servis dans les cantines à midi.</p> 
-        <p class="lead">De plus, cette application offre la possibilité aux parents d'ajuster le repas du soir à domicile en fonction du déjeuner de l'enfant à l'école. Pour ce faire, elle propose diverses recettes adaptées.</p>
-        <img src="./logo_cantine.png" alt="Avatar Logo" style="width:1000px;" class="rounded-pill">
+      <div class="container mt-5 mb-5">
+        <p class="lead"><b>Plongez au cœur des cantines de Montpellier !</b> Explorez la provenance, la diversité et la qualité exceptionnelle des aliments qui composent les repas de vos enfants. Découvrez des recettes savoureuses.</p>
+        <p class="lead">Notre site vous offre une <b>fenêtre transparente</b> sur nos pratiques d'approvisionnement locales, notre lutte contre les aliments ultra-transformés, et notre volonté de promouvoir le bien-manger dès le plus jeune âge.</p>
       </div>
-    
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-  
-      <div class="container mt-5">
-        <div class="row">
-          <div class="col-sm-4">
-            <h3><i class="fas fa-utensils"></i> 120 repas proposés par mois</h3>
-            <p>Chaque mois, nous proposons 120 repas différents, préparés avec soin et attention.Nous nous efforçons de fournir des repas nutritifs et équilibrés pour nos élèves.</p>
+      <div class="bg-secondary-custom text-white py-4">
+        <div class="container mt-5 mb-3">
+          <div class="row">
+            <div class="col-sm-4 d-flex flex-column justify-content-between">
+              <h3 style="color:#b0b03b;"><i class="fa-solid fa-school"></i> <span id="restaurants-scolaires">0</span> restaurants scolaires dont 14 en self</h3>
+              <p class="p_special">Chaque jour, les repas sont livrés en circuit direct dans les restaurants scolaires et selfs, assurant fraîcheur et qualité.</p>
+            </div>
+            <div class="col-sm-4 d-flex flex-column justify-content-between">
+              <h3 style="color:#ff84fb;"><i class="fas fa-utensils" ></i> <span id="repas-mois" >0</span> <span ></span>repas produits par jour</h3>
+              <p class="p_special">Les repas sont préparés quotidiennement à Montpellier dans la cantine centrale de la Martelle.</p>
+            </div>
+            <div class="col-sm-4 d-flex flex-column justify-content-between">
+              <h3 style="color: #59c859;"></h3style><i class="fas fa-seedling"></i> <span id="repas-bio">0</span>% de produits durables</h3>
+              <p class="p_special">D'ici 2025, 100% de nos produits seront locaux et/ou durables, conformément à la loi EGALIM et notre politique.</p>
+            </div>
           </div>
-          <div class="col-sm-4">
-            <h3><i class="fas fa-seedling"></i> 75% de produits bio et/ou locaux</h3>
-            <p>Cela nous permet de soutenir les agriculteurs locaux tout en garantissant la qualité de nos ingrédients.</p>
-          </div>
-          <div class="col-sm-4">
-            <h3><i class="fas fa-utensil-spoon"></i> 16 000 repas distribués</h3>
-            <p>La qualité des 16 000 repas servis quotidiennement dans les cantines repose sur le maintien d’une production culinaire traditionnelle.</p>
-          </div>
+        </div>        
+      </div>
+
+      <div class="container mt-5 mb-3">
+        <img src="Images/graphe.png" alt="Avatar Logo" style="width:100%;" class="rounded-pill">
+      </div>
+
   </div>
 </div>
-<footer class="bg-secondary text-white py-4">
+
+<br>
+<footer class="bg-success text-white py-4">
+  <div class="container mb-3">
+    <h3 style="color:#c9e1af;">Six piliers pour une alimentation responsable</h3>
+  </div>
     <div class="container">
       <div class="row">
         <div class="col-md-4">
-          <h5>10% d'ingrédients transformés</h5>
-          <p>Ici vous pouvez ajouter des détails sur les ingrédients transformés.</p>
+          <h5>Bien acheter</h5>
+          <p>Préserver l’agroécologie du territoire et introduire des produits issus de l’agriculture biologique et/ou locaux.
+          </p>
         </div>
         <div class="col-md-4">
-          <h5>10% d'ingrédients bruts</h5>
-          <p>Voici des informations sur les ingrédients bruts utilisés.</p>
+          <h5>Bien cuisiner</h5>
+          <p>Construire un plan alimentaire durable et flexitarien composé de cycles de menus de saison.</p>
         </div>
         <div class="col-md-4">
-          <h5>20% d'indicateur AIT GLOBAL</h5>
-          <p>Cette colonne peut contenir des détails sur l'indicateur AIT GLOBAL.</p>
+          <h5>Bien manger</h5>
+          <p>Proposer des repas durables et responsables distribués par des personnels formés à l’approche hôtelière.</p>
         </div>
       </div>
+        <div class="row">
+          <div class="col-md-4">
+            <h5>Bien sensibiliser</h5>
+            <p>Promouvoir l’alimentation durable et la lutte contre le gaspillage alimentaire auprès des enfants, parents et professionnels.</p>
+          </div>
+          <div class="col-md-4">
+            <h5>Bien partager</h5>
+            <p>Développer une tarification solidaire de la restauration scolaire et une politique de dons conventionnés.</p>
+          </div>
+          <div class="col-md-4">
+            <h5>Bien décider et expliquer</h5>
+            <p>Développer une gouvernance participative et une politique de transparence à l’égard des familles.</p>
+          </div>
+        </div>
     </div>
   </footer>
+
+  <script>
+    // Fonction pour animer les chiffres dans des éléments <span>
+    function animateNumber(id, endValue) {
+      var span = document.querySelector(id);
+      var currentNumber = 0;
+      var increment = endValue / 200; // Le nombre d'itérations est basé sur la durée de 2000ms et un intervalle de 10ms
+      var timer = setInterval(function() {
+        currentNumber += increment;
+        if (currentNumber >= endValue) {
+          currentNumber = endValue; // Assurez-vous de ne pas dépasser la valeur finale
+          clearInterval(timer);
+        }
+        span.textContent = Math.floor(currentNumber);
+      }, 10);
+    }
+  
+    // Animer les chiffres au chargement de la page
+    animateNumber("#repas-mois", 15500);
+    animateNumber("#repas-bio", 50);
+    animateNumber("#restaurants-scolaires", 87);
+  </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Animer les chiffres après que le DOM soit chargé
+    animateNumber("#repas-mois", 15500);
+    animateNumber("#repas-bio", 50);
+    animateNumber("#restaurants-scolaires", 87);
+  });
+</script>
+  
+
 </body>
 </html>

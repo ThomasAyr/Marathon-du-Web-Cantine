@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Animations de Statistiques</title>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<style>
+  svg {
+    width: 100px; height: 50px;
+  }
+  .stat-text {
+    font-size: 20px;
+    fill: #000;
+  }
+</style>
+</head>
+<body>
+
+<main>
+  <div id="stats-container">
+    <svg id="repas-svg">
+      <text class="stat-text" x="10" y="30">0</text>
+    </svg>
+    <svg id="restaurants-svg">
+      <text class="stat-text" x="10" y="30">0</text>
+    </svg>
+    <!-- Ajouter d'autres SVG ici -->
+  </div>
+</main>
+
+<script>
+  // Fonction pour animer les chiffres
+  function animateNumber(id, endValue) {
+    var svg = d3.select(id);
+    svg.select(".stat-text")
+      .transition()
+      .duration(2000)
+      .tween("text", function() {
+        var that = d3.select(this),
+            i = d3.interpolateNumber(0, endValue);
+        return function(t) {
+          that.text(Math.floor(i(t)));
+        };
+      });
+  }
+
+  // Animer les chiffres au chargement de la page
+  animateNumber("#repas-svg", 15500);
+  animateNumber("#restaurants-svg", 87);
+  // Appeler animateNumber pour les autres éléments SVG avec leurs valeurs respectives
+
+</script>
+
+</body>
+</html>
