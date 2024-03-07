@@ -9,16 +9,23 @@
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!--   <link rel="stylesheet" href="./css/DIAGRAMME.css" />
-     <script src="../jquery-3.7.1.min.js"></script>
-<script src="../jqcloud.js"></script>-->
 
     <link href="./css/Menu.css" rel="stylesheet" />
     <link href="./css/Cercle.css" rel="stylesheet" />
   </head>
-  <body>
+  <body style="background-color: #f7e8d8">
+    <style>
+      .graphContainer {
+        width: 100%; /* ou une largeur fixe, selon le besoin */
+        min-height: 400px; /* Ajustez en fonction de la taille souhaitée pour le graphique */
+      }
+    </style>
     <div class="container">
-      <canvas id="fromageChart"></canvas>
+      <canvas
+        id="fromageChart"
+        style="background-color: #f7e8d8"
+        class="graphContainer"
+      ></canvas>
     </div>
 
     <!-- Ajoutez ici des options pour chaque catégorie --->

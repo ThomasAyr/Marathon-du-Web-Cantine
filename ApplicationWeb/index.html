@@ -191,7 +191,18 @@
       <div id="Contenu2" class="tabcontent">
         <div class="container mt-5 mb-4">
           <h3 style="color:#1d4764">Répartition des aliments selon leur niveau de transformation par nombre</h3>
-          en cours
+          
+          <iframe class="desktop-only" src="graph2.html" style="overflow:hidden;" width="100%" height="600" frameborder="0"></iframe>
+          <iframe class="mobile-only" src="graph2.html" style="overflow:hidden;" width="100%" height="900" frameborder="0"></iframe>
+
+          <h3 style="color:#1d4764">Répartition des aliments ultra-transformés</h3>
+
+          <p>Nous notons toutefois que la majorité des aliments.</p>
+          
+          <iframe src="grapheing.html" style="overflow:hidden;" width="100%" height="480px" frameborder="0"></iframe>
+        
+
+
           </div>
 
       </div>
@@ -254,7 +265,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
       
-<div class="citation-container d-flex flex-column justify-content-center align-items-center" style="min-height: 100vh;">
+<div class="citation-container d-flex flex-column justify-content-center align-items-center mt-4 mb-4" style="min-height: 100vh;">
   <div style="text-align: center;">
     <i class="fa-solid fa-magnifying-glass" style="font-size: 66px; color: #c56376;"></i>
   </div>
@@ -529,7 +540,126 @@ document.addEventListener("DOMContentLoaded", function() {
   </div>
 </div>
 
-<div style="margin-bottom: 10rem;"> </div>
+
+
+<div
+id="monCarrousel"
+class="carousel slide mt-2 mb-5"
+data-bs-ride="carousel"
+>
+<div class="carousel-inner">
+  <div class="carousel-item active">
+    <img
+      src="Caroussel/baking-2881192_1280.jpg"
+      class="d-block w-100"
+      alt="Image 1"
+    />
+  </div>
+  <div class="carousel-item">
+    <img
+      src="Caroussel/gareth-hubbard-qPcSUERqBAc-unsplash.jpg"
+      class="d-block w-100"
+      alt="Image 2"
+    />
+  </div>
+  <div class="carousel-item">
+    <img
+      src="Caroussel/oignons local.png"
+      class="d-block w-100"
+      alt="Image 3"
+    />
+  </div>
+  <div class="carousel-item">
+    <img
+      src="Caroussel/Pain Bio.png"
+      class="d-block w-100"
+      alt="Image 1"
+    />
+  </div>
+  <div class="carousel-item">
+    <img
+      src="Caroussel/patisserie maison.png"
+      class="d-block w-100"
+      alt="Image 1"
+    />
+  </div>
+  <div class="carousel-item">
+    <img
+      src="Caroussel/pexels-anastasia-shuraeva-8466771.jpg"
+      class="d-block w-100"
+      alt="Image 1"
+    />
+  </div>
+  <div class="carousel-item">
+    <img
+      src="Caroussel/pexels-anastasia-shuraeva-8466918.jpg"
+      class="d-block w-100"
+      alt="Image 1"
+    />
+  </div>
+  <div class="carousel-item">
+    <img
+      src="Caroussel/self-service-restaurant.jpg"
+      class="d-block w-100"
+      alt="Image 1"
+    />
+  </div>
+</div>
+<button
+  class="carousel-control-prev"
+  type="button"
+  data-bs-target="#monCarrousel"
+  data-bs-slide="prev"
+>
+  <i
+    class="bi bi-chevron-left"
+    style="color: #c56376; font-size: 2rem"
+  ></i>
+  <span class="visually-hidden">Précédent</span>
+</button>
+<button
+  class="carousel-control-next"
+  type="button"
+  data-bs-target="#monCarrousel"
+  data-bs-slide="next"
+>
+  <i
+    class="bi bi-chevron-right"
+    style="color: #c56376; font-size: 2rem"
+  ></i>
+  <span class="visually-hidden">Suivant</span>
+</button>
+</div>
+<style>
+@media (min-width: 550px) {
+  #monCarrousel {
+    width: 70%; /* Largeur du carrousel */
+    margin: auto; /* Centrer le carrousel horizontalement */
+    height: 300px; /* Hauteur fixe du carrousel */
+    overflow: hidden; /* Masquer les parties des images qui dépassent */
+  }
+
+  #monCarrousel .carousel-inner .carousel-item img {
+    width: 100%; /* Faire en sorte que les images prennent toute la largeur du carrousel */
+    object-fit: cover; /* Couvrir la hauteur fixe sans perdre les proportions */
+    height: 300px; /* Hauteur fixe pour les images */
+  }
+}
+@media (max-width: 550px) {
+  #monCarrousel {
+    width: 100%; /* Largeur du carrousel */
+    margin: auto; /* Centrer le carrousel horizontalement */
+    height: auto; /* Hauteur fixe du carrousel */
+    overflow: hidden; /* Masquer les parties des images qui dépassent */
+  }
+
+  #monCarrousel .carousel-inner .carousel-item img {
+    width: 100%; /* Faire en sorte que les images prennent toute la largeur du carrousel */
+    object-fit: cover; /* Couvrir la hauteur fixe sans perdre les proportions */
+    height: auto; /* Hauteur fixe pour les images */
+  }
+}
+</style>
 
 
 <div class="bg-secondary-custom py-5">

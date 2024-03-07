@@ -4,52 +4,74 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nuage de mots par catégorie</title>
-    <!-- Inclure D3.js -->
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
     <script src="https://unpkg.com/d3-cloud/build/d3.layout.cloud.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="css/Cercle.css" />
+    <link href="./css/Menu.css" rel="stylesheet" />
+
     <style>
       .wordcloudContainer {
         position: relative;
         width: 300px;
         height: 300px;
         margin: 20px auto;
-        border: 1px solid #ccc;
         overflow: hidden;
+      }
+      #dpaChartContainer {
+        width: 300px;
+        height: 300px;
+        margin: 20px auto;
       }
     </style>
   </head>
-  <body>
-    <!-- Sélecteur de catégorie (caché puisque mis à jour automatiquement) -->
+  <body style="background-color: #f7e8d8">
     <select id="categorySelect" style="display: none">
       <option value="">Sélectionner une catégorie</option>
     </select>
 
-    <!-- Titre du nuage de mots -->
-    <div
-      id="Titre_nuage"
-      class="centered-text"
-      style="text-align: center; margin-bottom: 10px"
-    ></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <div id="legend" style="text-align: left; margin-top: 20px">
+            <div
+              id="Titre_nuage"
+              class="titre"
+              style="text-align: center; margin-bottom: 10px"
+            ></div>
+          </div>
+        </div>
 
-    <!-- Conteneur pour le nuage de mots -->
-    <div id="wordcloudContainer" class="wordcloudContainer"></div>
-    <div id="legend" style="text-align: center; margin-top: 20px">
-      <h3>Légende</h3>
-      <div id="legend-items"></div>
+        <div class="row">
+          <div class="col">
+            <div id="wordcloudContainer" class="wordcloudContainer"></div>
+          </div>
+
+          <div class="col">
+            <div id="dpaChartContainer">
+              <canvas id="dpaChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div id="graphContainer">
-      <canvas id="dpaChart"></canvas>
+    <div
+      id="legend"
+      style="display: flex; justify-content: center; flex-wrap: wrap; gap: 10px"
+    >
+      <div id="legend-items" style="display: flex; gap: 10px">
+        <!-- Les éléments de la légende viendront ici -->
+      </div>
     </div>
 
     <script>
-      // Fonction pour créer le nuage de mots pour une catégorie donnée
       function createWordCloud(data) {
-        // Fonction pour obtenir la couleur en fonction de DPA
         function getColorByDPA(dpa) {
           if (dpa <= 1) {
             return "#a6bddb";
@@ -62,17 +84,15 @@
           }
         }
 
-        // Fonction pour formater le titre
         function formatTitle(str) {
           if (!str) return "";
           return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
         }
 
-        // Fonction pour afficher le nuage de mots
         function renderWordCloud(categoryData) {
-          const svgDimension = 300; // Dimension du SVG
+          const svgDimension = 300;
           const wordCloud = d3.select("#wordcloudContainer");
-          wordCloud.selectAll("*").remove(); // Effacer le contenu précédent
+          wordCloud.selectAll("*").remove();
 
           const layout = d3.layout
             .cloud()
@@ -81,7 +101,7 @@
               categoryData.map(function (d) {
                 return {
                   text: d["Libélée marchandises"],
-                  size: 10 + Math.random() * 40, // Taille aléatoire pour l'exemple
+                  size: 10 + Math.random() * 40,
                   dpa: d["DPA (NOVA/Siga)"],
                 };
               })
@@ -122,20 +142,6 @@
           }
         }
 
-        // Sélectionner une catégorie au hasard et mettre à jour
-        function selectRandomCategory() {
-          const categories = Array.from(new Set(data.map((d) => d.Catégorie)));
-          const randomIndex = Math.floor(Math.random() * categories.length);
-          const selectedCategory = categories[randomIndex];
-          document.getElementById("Titre_nuage").innerText =
-            formatTitle(selectedCategory);
-
-          const categoryData = data.filter(
-            (d) => d.Catégorie === selectedCategory
-          );
-          renderWordCloud(categoryData);
-        }
-
         function addLegend() {
           const legendData = [
             { dpa: "DPA = 1", color: "#a6bddb" },
@@ -165,45 +171,50 @@
           items.append("text").text((d) => d.dpa);
         }
 
-        let chartInstance; // Conserver une référence au graphique pour le mettre à jour
-
         function updateChart(categoryData) {
-          // Calculer les compteurs de DPA pour la catégorie actuelle
           const dpaCounts = { 1: 0, 2: 0, 3: 0, 4: 0 };
+
+          // Compter le nombre d'aliments pour chaque type de DPA
           categoryData.forEach((detail) => {
-            dpaCounts[detail["DPA (NOVA/Siga)"]]++;
+            const dpa = Math.floor(detail["DPA (NOVA/Siga)"]);
+            if (
+              dpa === 4 &&
+              (detail["DPA (NOVA/Siga)"] === 4.1 ||
+                detail["DPA (NOVA/Siga)"] === 4.2)
+            ) {
+              dpaCounts[4]++;
+            } else {
+              dpaCounts[dpa]++;
+            }
           });
 
+          // Créer le tableau contenant les données à afficher dans le graphique
           const chartData = [
-            dpaCounts[1],
-            dpaCounts[2],
-            dpaCounts[3],
-            dpaCounts[4],
+            { text: "DPA = 1", size: dpaCounts[1], color: getColorByDPA(1) },
+            { text: "DPA = 2", size: dpaCounts[2], color: getColorByDPA(2) },
+            { text: "DPA = 3", size: dpaCounts[3], color: getColorByDPA(3) },
+            { text: "DPA = 4", size: dpaCounts[4], color: getColorByDPA(4) },
           ];
 
-          // Vérifier si le graphique existe déjà; le mettre à jour si c'est le cas
+          // Mettre à jour le graphique
           if (chartInstance) {
-            chartInstance.data.datasets.forEach((dataset) => {
-              dataset.data = chartData;
-            });
+            chartInstance.data.labels = chartData.map((d) => d.text);
+            chartInstance.data.datasets[0].data = chartData.map((d) => d.size);
+            chartInstance.data.datasets[0].backgroundColor = chartData.map(
+              (d) => d.color
+            );
             chartInstance.update();
           } else {
-            // Créer le graphique si ce n'est pas déjà fait
             const ctx = document.getElementById("dpaChart").getContext("2d");
             chartInstance = new Chart(ctx, {
-              type: "bar",
+              type: "pie",
               data: {
-                labels: ["DPA = 1", "DPA = 2", "DPA = 3", "DPA = 4"],
+                labels: chartData.map((d) => d.text),
                 datasets: [
                   {
                     label: "Nombre d'aliments",
-                    data: chartData,
-                    backgroundColor: [
-                      "rgba(255, 200, 200, 0.6)",
-                      "rgba(255, 150, 150, 0.6)",
-                      "rgba(255, 100, 100, 0.6)",
-                      "rgba(255, 0, 0, 0.6)",
-                    ],
+                    data: chartData.map((d) => d.size),
+                    backgroundColor: chartData.map((d) => d.color),
                     borderColor: "rgba(255, 255, 255, 1)",
                     borderWidth: 1,
                   },
@@ -215,39 +226,47 @@
                     display: false,
                   },
                 },
-                scales: {
-                  y: {
-                    beginAtZero: true,
-                  },
-                },
               },
             });
           }
         }
+
+        function selectRandomCategory() {
+          const categories = Array.from(new Set(data.map((d) => d.Catégorie)));
+          const randomIndex = Math.floor(Math.random() * categories.length);
+          const selectedCategory = categories[randomIndex];
+          document.getElementById("Titre_nuage").innerText =
+            formatTitle(selectedCategory);
+
+          const categoryData = data.filter(
+            (d) => d.Catégorie === selectedCategory
+          );
+          renderWordCloud(categoryData);
+          updateChart(categoryData);
+        }
+
+        let chartInstance;
+
         categorySelect.addEventListener("change", () => {
           const selectedCategory = categorySelect.value;
           if (selectedCategory) {
             const categoryData = data.filter(
               (d) => d["Catégorie"] === selectedCategory
             );
-            renderWordCloud(categoryData); // Fonction pour mettre à jour le nuage de mots
-            updateChart(categoryData); // Mise à jour du graphique avec les données filtrées
+            renderWordCloud(categoryData);
+            updateChart(categoryData);
           }
         });
-        // Au chargement de la page, vous pouvez sélectionner une catégorie par défaut si souhaité
+
         window.onload = function () {
-          selectRandomCategory(); // Ou une autre logique pour définir une catégorie initiale
+          selectRandomCategory();
         };
 
-        // Assurez-vous d'appeler addLegend quelque part après que le DOM soit chargé
         addLegend();
-
-        // Initialiser et mettre à jour le nuage de mots toutes les 20 secondes
         selectRandomCategory();
-        setInterval(selectRandomCategory, 20000);
+        setInterval(selectRandomCategory, 8000);
       }
 
-      // Charger les données et créer le nuage de mots
       fetch("../Donnees/donnees_ingredients.json")
         .then((response) => response.json())
         .then((data) => {
