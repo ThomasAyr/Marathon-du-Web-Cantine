@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <scri <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ma Cantine s'engage</title>
+    <link rel="icon" href="Images/ma.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/Cercle.css" />
+    <link href="./css/Menu.css" rel="stylesheet" />
+
+    <meta charset="utf-8" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-sm navbar-dark bg-secondary-custom"
+      style="height: 65px"
+    >
+      <div class="container">
+        <div class="mobile-only">
+          <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img
+              src="Logos/Montpellier.svg"
+              alt="Montpellier Logo"
+              style="height: 45px"
+            /><img
+              src="Images/ma.png"
+              alt="Montpellier Logo"
+              style="height: 45px"
+            />
+          </a>
+        </div>
+
+        <div class="desktop-only">
+          <a
+            class="navbar-brand d-flex align-items-center"
+            href="index.html"
+            style="
+              position: relative;
+              z-index: 1000;
+              transform: translateY(16px);
+            "
+          >
+            <img
+              src="Logos/Montpellier.svg"
+              alt="Montpellier Logo"
+              style="height: 60px"
+            />
+            <img
+              class="desktop-only"
+              src="Images/ma.png"
+              alt="Cantine Logo"
+              style="height: 70px"
+            />
+          </a>
+        </div>
+
+        <button
+          style="background-color: #f7e8d8 !important"
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul
+            class="navbar-nav"
+            style="background-color: #f8e9d9; text-align: center"
+          >
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                style="color: #1d4764"
+                href="index.html"
+                >Le projet</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: #1d4764" href="menu.html"
+                >Au menu</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: #1d4764" href="recette.html"
+                >Recettes</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="banner-image" style="width: 100%; overflow: hidden">
+      <img
+        src="Images/bandeau.png"
+        alt="Bandeau sur l'alimentation"
+        style="width: 100%"
+      />
+    </div>
+
+    <div class="container mt-5 mb-1">
+      <text class="titre"> Ma Cantine s’engage ! </text>
+    </div>
+
+    <div
+      id="monCarrousel"
+      class="carousel slide mt-2 mb-5"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="Caroussel/baking-2881192_1280.jpg"
+            class="d-block w-100"
+            alt="Image 1"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="Caroussel/gareth-hubbard-qPcSUERqBAc-unsplash.jpg"
+            class="d-block w-100"
+            alt="Image 2"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="Caroussel/oignons local.png"
+            class="d-block w-100"
+            alt="Image 3"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="Caroussel/Pain Bio.png"
+            class="d-block w-100"
+            alt="Image 1"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="Caroussel/patisserie maison.png"
+            class="d-block w-100"
+            alt="Image 1"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="Caroussel/pexels-anastasia-shuraeva-8466771.jpg"
+            class="d-block w-100"
+            alt="Image 1"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="Caroussel/pexels-anastasia-shuraeva-8466918.jpg"
+            class="d-block w-100"
+            alt="Image 1"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="Caroussel/self-service-restaurant.jpg"
+            class="d-block w-100"
+            alt="Image 1"
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#monCarrousel"
+        data-bs-slide="prev"
+      >
+        <i
+          class="bi bi-chevron-left"
+          style="color: #c56376; font-size: 2rem"
+        ></i>
+        <span class="visually-hidden">Précédent</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#monCarrousel"
+        data-bs-slide="next"
+      >
+        <i
+          class="bi bi-chevron-right"
+          style="color: #c56376; font-size: 2rem"
+        ></i>
+        <span class="visually-hidden">Suivant</span>
+      </button>
+    </div>
+    <style>
+      @media (min-width: 550px) {
+        #monCarrousel {
+          width: 70%; /* Largeur du carrousel */
+          margin: auto; /* Centrer le carrousel horizontalement */
+          height: 300px; /* Hauteur fixe du carrousel */
+          overflow: hidden; /* Masquer les parties des images qui dépassent */
+        }
+
+        #monCarrousel .carousel-inner .carousel-item img {
+          width: 100%; /* Faire en sorte que les images prennent toute la largeur du carrousel */
+          object-fit: cover; /* Couvrir la hauteur fixe sans perdre les proportions */
+          height: 300px; /* Hauteur fixe pour les images */
+        }
+      }
+      @media (max-width: 550px) {
+        #monCarrousel {
+          width: 100%; /* Largeur du carrousel */
+          margin: auto; /* Centrer le carrousel horizontalement */
+          height: 300px; /* Hauteur fixe du carrousel */
+          overflow: hidden; /* Masquer les parties des images qui dépassent */
+        }
+
+        #monCarrousel .carousel-inner .carousel-item img {
+          width: 100%; /* Faire en sorte que les images prennent toute la largeur du carrousel */
+          object-fit: cover; /* Couvrir la hauteur fixe sans perdre les proportions */
+          height: 300px; /* Hauteur fixe pour les images */
+        }
+      }
+    </style>
+
+    <div class="bg-secondary-custom py-5">
+      <div class="container mb-4"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <img
+              src="Logos/Montpellier.svg"
+              alt="Montpellier Logo"
+              style="height: 70px"
+            />
+            <img
+              src="Images/ma.png"
+              alt="Montpellier Logo"
+              style="height: 70px"
+            />
+          </div>
+          <div class="col-md-4"></div>
+
+          <div class="col-md-4">
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/villedemontpellier/?locale=fr_FR"
+                style="text-decoration: none"
+                target="_blank"
+              >
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/villedemontpellier/?hl=fr"
+                target="_blank"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a
+                href="https://twitter.com/montpellier_?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                target="_blank"
+              >
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <a
+              class="style"
+              ="margin-right: 10px;"
+              id="social-icons"
+              href="https://www.montpellier.fr"
+              >Ville de Montpellier</a
+            >
+            <a class="style" ="margin-right: 10px;" id="social-icons"
+              >Mentions légales</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

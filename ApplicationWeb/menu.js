@@ -113,7 +113,7 @@ fetch("../Donnees/donnees_menus.json")
           jour.recettes.forEach((recette) => {
             const divRecette = document.createElement("div");
             divRecette.classList.add("recette");
-            divRecette.innerHTML = `<h3>${recette.RecetteGlobale}</h3>`;
+            divRecette.innerHTML = `> ${recette.RecetteGlobale} :`;
 
             recette.details.forEach((detail) => {
               const divDetail = document.createElement("div");

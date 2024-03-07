@@ -211,7 +211,7 @@
           .style("text-anchor", "middle") // Centre le texte
           .text("Semaines");
 
-          svg
+        svg
           .append("text")
           .attr("transform", "rotate(-90)") // Rotation pour aligner le texte verticalement
           .attr("y", 0 - margin.left) // Positionnement à gauche de l'axe Y
@@ -219,7 +219,6 @@
           .attr("dy", "1em") // Ajustement pour aligner correctement le texte
           .style("text-anchor", "middle") // Alignement du texte au centre pour une lecture de haut en bas
           .text("Proportion en %"); // Texte de la légende
-      }
       }
 
       chargerEtTraiterDonnees();

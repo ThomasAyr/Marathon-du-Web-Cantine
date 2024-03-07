@@ -44,7 +44,7 @@ body {
   background-color: white;
   padding: 20px;
   border: 1px solid #ccc;
-  width: 280px; /* Largeur fixe pour chaque élément de menu */
+  width: 220px; /* Largeur fixe pour chaque élément de menu */
   height: 300px; /* Hauteur fixe pour chaque élément de menu */
   margin-bottom: 20px; /* Ajouter de l'espace entre les menus */
   margin: 0 5px 20px;
@@ -52,13 +52,12 @@ body {
 }
 
 .jour-image {
-  width: 280px; /* Largeur fixe pour chaque image */
+  width: 220px; /* Largeur fixe pour chaque image */
   height: auto; /* Conserver le ratio de l'image */
   z-index: 1; /* Placer l'image derrière le cadre */
 }
 
-.menu h2 {
-  font-size: 18px;
+.menu h3 {
   margin: 3px 0px 10px;
   color: #333;
 }

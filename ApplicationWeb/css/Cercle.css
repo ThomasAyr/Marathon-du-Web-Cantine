@@ -15,6 +15,18 @@ body {
   font-family: "GothamNarrow-Book", sans-serif;
 }
 
+.social-icons a {
+  font-size: 30px;
+  color: #c56376; /* Couleur des icônes */
+  text-decoration: none;
+  margin-right: 10px;
+}
+#social-icons {
+  color: #c56376; /* Couleur des icônes */
+  text-decoration: none;
+  margin-right: 10px;
+}
+
 .container-cercle {
   position: relative;
   width: 450px; /* Taille initiale */
@@ -139,6 +151,7 @@ body {
   font-weight: bold;
   border-radius: 0;
   text-decoration: none;
+  border: 2px solid #c56376;
   transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
 }
 
@@ -185,6 +198,18 @@ body {
     font-size: 30px;
     width: 50%;
     text-align: center;
+    margin: 20px auto; /* Ajustez cette marge pour contrôler l'espace entre l'icône et le texte */
+  }
+  .centered-textmini {
+    font-size: 23px;
+    width: 50%;
+    text-align: center;
+    margin: 20px auto; /* Ajustez cette marge pour contrôler l'espace entre l'icône et le texte */
+  }
+  .centered-textmini-grandtexte {
+    font-size: 20px;
+    width: 50%;
+    text-align: left;
     margin: 20px auto; /* Ajustez cette marge pour contrôler l'espace entre l'icône et le texte */
   }
   .centered-textcenter {

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuage de mots par catégorie</title>
+    <!-- Inclure D3.js -->
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="https://unpkg.com/d3-cloud/build/d3.layout.cloud.js"></script>
+
+    <link rel="stylesheet" href="css/Cercle.css" />
+    <style>
+      .wordcloudContainer {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        margin: 20px auto;
+        border: 1px solid #ccc;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sélecteur de catégorie (caché puisque mis à jour automatiquement) -->
+    <select id="categorySelect" style="display: none">
+      <option value="">Sélectionner une catégorie</option>
+    </select>
+
+    <!-- Titre du nuage de mots -->
+    <div
+      id="Titre_nuage"
+      class="centered-text"
+      style="text-align: center; margin-bottom: 10px"
+    ></div>
+
+    <!-- Conteneur pour le nuage de mots -->
+    <div id="wordcloudContainer" class="wordcloudContainer"></div>
+    <div id="legend" style="text-align: center; margin-top: 20px">
+      <h3>Légende</h3>
+      <div id="legend-items"></div>
+    </div>
+
+    <div id="graphContainer">
+      <canvas id="dpaChart"></canvas>
+    </div>
+
+    <script>
+      // Fonction pour créer le nuage de mots pour une catégorie donnée
+      function createWordCloud(data) {
+        // Fonction pour obtenir la couleur en fonction de DPA
+        function getColorByDPA(dpa) {
+          if (dpa <= 1) {
+            return "#a6bddb";
+          } else if (dpa == 2) {
+            return "#74a9cf";
+          } else if (dpa == 3) {
+            return "#2b8cbe";
+          } else if ((dpa) => 4 && dpa <= 5) {
+            return "#045a8d";
+          }
+        }
+
+        // Fonction pour formater le titre
+        function formatTitle(str) {
+          if (!str) return "";
+          return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+        }
+
+        // Fonction pour afficher le nuage de mots
+        function renderWordCloud(categoryData) {
+          const svgDimension = 300; // Dimension du SVG
+          const wordCloud = d3.select("#wordcloudContainer");
+          wordCloud.selectAll("*").remove(); // Effacer le contenu précédent
+
+          const layout = d3.layout
+            .cloud()
+            .size([svgDimension, svgDimension])
+            .words(
+              categoryData.map(function (d) {
+                return {
+                  text: d["Libélée marchandises"],
+                  size: 10 + Math.random() * 40, // Taille aléatoire pour l'exemple
+                  dpa: d["DPA (NOVA/Siga)"],
+                };
+              })
+            )
+            .padding(5)
+            .rotate(() => 0)
+            .fontSize((d) => d.size)
+            .on("end", drawWords);
+
+          layout.start();
+
+          function drawWords(words) {
+            wordCloud
+              .append("svg")
+              .attr("width", layout.size()[0])
+              .attr("height", layout.size()[1])
+              .append("g")
+              .attr(
+                "transform",
+                "translate(" +
+                  layout.size()[0] / 2 +
+                  "," +
+                  layout.size()[1] / 2 +
+                  ")"
+              )
+              .selectAll("text")
+              .data(words)
+              .enter()
+              .append("text")
+              .style("font-size", (d) => d.size + "px")
+              .style("fill", (d) => getColorByDPA(d.dpa))
+              .attr("text-anchor", "middle")
+              .attr(
+                "transform",
+                (d) => "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")"
+              )
+              .text((d) => d.text);
+          }
+        }
+
+        // Sélectionner une catégorie au hasard et mettre à jour
+        function selectRandomCategory() {
+          const categories = Array.from(new Set(data.map((d) => d.Catégorie)));
+          const randomIndex = Math.floor(Math.random() * categories.length);
+          const selectedCategory = categories[randomIndex];
+          document.getElementById("Titre_nuage").innerText =
+            formatTitle(selectedCategory);
+
+          const categoryData = data.filter(
+            (d) => d.Catégorie === selectedCategory
+          );
+          renderWordCloud(categoryData);
+        }
+
+        function addLegend() {
+          const legendData = [
+            { dpa: "DPA = 1", color: "#a6bddb" },
+            { dpa: "DPA = 2", color: "#74a9cf" },
+            { dpa: "DPA = 3", color: "#2b8cbe" },
+            { dpa: "DPA = 4.1 ou 4.2", color: "#045a8d" },
+          ];
+
+          const legend = d3.select("#legend-items");
+          const items = legend
+            .selectAll(".legend-item")
+            .data(legendData)
+            .enter()
+            .append("div")
+            .attr("class", "legend-item")
+            .style("display", "flex")
+            .style("align-items", "center")
+            .style("margin-bottom", "5px");
+
+          items
+            .append("div")
+            .style("width", "20px")
+            .style("height", "20px")
+            .style("margin-right", "5px")
+            .style("background-color", (d) => d.color);
+
+          items.append("text").text((d) => d.dpa);
+        }
+
+        let chartInstance; // Conserver une référence au graphique pour le mettre à jour
+
+        function updateChart(categoryData) {
+          // Calculer les compteurs de DPA pour la catégorie actuelle
+          const dpaCounts = { 1: 0, 2: 0, 3: 0, 4: 0 };
+          categoryData.forEach((detail) => {
+            dpaCounts[detail["DPA (NOVA/Siga)"]]++;
+          });
+
+          const chartData = [
+            dpaCounts[1],
+            dpaCounts[2],
+            dpaCounts[3],
+            dpaCounts[4],
+          ];
+
+          // Vérifier si le graphique existe déjà; le mettre à jour si c'est le cas
+          if (chartInstance) {
+            chartInstance.data.datasets.forEach((dataset) => {
+              dataset.data = chartData;
+            });
+            chartInstance.update();
+          } else {
+            // Créer le graphique si ce n'est pas déjà fait
+            const ctx = document.getElementById("dpaChart").getContext("2d");
+            chartInstance = new Chart(ctx, {
+              type: "bar",
+              data: {
+                labels: ["DPA = 1", "DPA = 2", "DPA = 3", "DPA = 4"],
+                datasets: [
+                  {
+                    label: "Nombre d'aliments",
+                    data: chartData,
+                    backgroundColor: [
+                      "rgba(255, 200, 200, 0.6)",
+                      "rgba(255, 150, 150, 0.6)",
+                      "rgba(255, 100, 100, 0.6)",
+                      "rgba(255, 0, 0, 0.6)",
+                    ],
+                    borderColor: "rgba(255, 255, 255, 1)",
+                    borderWidth: 1,
+                  },
+                ],
+              },
+              options: {
+                plugins: {
+                  legend: {
+                    display: false,
+                  },
+                },
+                scales: {
+                  y: {
+                    beginAtZero: true,
+                  },
+                },
+              },
+            });
+          }
+        }
+        categorySelect.addEventListener("change", () => {
+          const selectedCategory = categorySelect.value;
+          if (selectedCategory) {
+            const categoryData = data.filter(
+              (d) => d["Catégorie"] === selectedCategory
+            );
+            renderWordCloud(categoryData); // Fonction pour mettre à jour le nuage de mots
+            updateChart(categoryData); // Mise à jour du graphique avec les données filtrées
+          }
+        });
+        // Au chargement de la page, vous pouvez sélectionner une catégorie par défaut si souhaité
+        window.onload = function () {
+          selectRandomCategory(); // Ou une autre logique pour définir une catégorie initiale
+        };
+
+        // Assurez-vous d'appeler addLegend quelque part après que le DOM soit chargé
+        addLegend();
+
+        // Initialiser et mettre à jour le nuage de mots toutes les 20 secondes
+        selectRandomCategory();
+        setInterval(selectRandomCategory, 20000);
+      }
+
+      // Charger les données et créer le nuage de mots
+      fetch("../Donnees/donnees_ingredients.json")
+        .then((response) => response.json())
+        .then((data) => {
+          createWordCloud(data);
+        });
+    </script>
+  </body>
+</html>
