@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/Cercle.css" />
+
+    <style>
+      /* Styles de base */
+      #menuContainer {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        font-family: "Arial", sans-serif;
+      }
+
+      #generateMenuBtn {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      #generateMenuBtn:hover {
+        background-color: #0056b3;
+      }
+
+      h2 {
+        background-color: #c56376;
+        padding: 10px;
+        color: white;
+        border-radius: 5px;
+        text-align: center;
+        position: relative;
+      }
+
+      h2::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -30px;
+        transform: translateY(-50%);
+        background-size: cover;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+      }
+
+      h5 {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        color: #1d4764;
+        font-size: 18px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        background-color: #eee;
+        margin: 5px 0;
+        padding: 5px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <button
+      id="generateMenuBtn"
+      class="btn-label"
+      style="background-color: #c56376"
+    >
+      Générer les menus
+    </button>
+    <div id="menuContainer"></div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Chargement des données depuis le fichier JSON
+        fetch("../Donnees/donnees_ingredients.json")
+          .then((response) => response.json())
+          .then((data) => {
+            const entreeCategories = [
+              "Pâtisseries salées fraîches",
+              "Légumes et légumes secs",
+            ];
+            const platCategories1 = [
+              "PLATS CUISINES COMPLETS",
+              "Poissons ",
+              "Viandes",
+            ];
+            const platCategories2 = ["Légumes", "Féculents"];
+            const dessertCategories = [
+              "Produits laitiers",
+              "Fruits",
+              "Pâtisseries sucrées fraîches",
+              "Pâtisseries sucrées surgelées",
+            ];
+
+            const joursSemaine = [
+              "LUNDI",
+              "MARDI",
+              "MERCREDI",
+              "JEUDI",
+              "VENDREDI",
+            ]; // Ajouter les autres jours si nécessaire
+
+            const menuContainer = document.getElementById("menuContainer");
+            const generateMenuBtn = document.getElementById("generateMenuBtn");
+
+            generateMenuBtn.addEventListener("click", () => {
+              menuContainer.innerHTML = "";
+              joursSemaine.forEach((jour, index) => {
+                const entree = generateRandomMenu(data, entreeCategories, 2); // 2 éléments dans l'entrée
+                const plat1 = generateRandomMenu(data, platCategories1, 1); // 1 élément dans la première catégorie de plat
+                const plat2 = generateRandomMenu(data, platCategories2, 1); // 1 élément dans la deuxième catégorie de plat
+                const plat = `${plat1.join("; ")}; ${plat2.join("; ")}`; // Combinaison des éléments des deux catégories de plat
+                const dessert = generateRandomMenu(data, dessertCategories, 3); // 3 éléments dans le dessert
+
+                const menuHTML = `
+                    <h2> Menu du ${jour}</h2>
+                    <h5>Entrée</h5>
+                    <ul>${entree
+                      .map((item) => `<li>${item}</li>`)
+                      .join("")}</ul>
+                    <h5>Plat</h5>
+                    <ul><li>${plat}</li></ul>
+                    <h5>Dessert</h5>
+                    <ul>${dessert
+                      .map((item) => `<li>${item}</li>`)
+                      .join("")}</ul>
+                `;
+                menuContainer.innerHTML += menuHTML;
+              });
+            });
+          });
+
+        // Fonction pour générer un menu aléatoire pour une catégorie donnée
+        function generateRandomMenu(data, categories, count) {
+          const menu = [];
+          const usedIngredients = new Set();
+
+          while (menu.length < count) {
+            const category =
+              categories[Math.floor(Math.random() * categories.length)];
+            const ingredientsInCategory = data.filter(
+              (item) =>
+                item.Catégorie === category &&
+                item["Libélée marchandises"] !== "Autre"
+            );
+            if (ingredientsInCategory.length === 0) continue;
+            const randomIngredient =
+              ingredientsInCategory[
+                Math.floor(Math.random() * ingredientsInCategory.length)
+              ];
+
+            if (
+              !usedIngredients.has(randomIngredient["Libélée marchandises"])
+            ) {
+              menu.push(randomIngredient["Libélée marchandises"]);
+              usedIngredients.add(randomIngredient["Libélée marchandises"]);
+            }
+          }
+
+          return menu;
+        }
+      });
+    </script>
+  </body>
+</html>

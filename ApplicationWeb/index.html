@@ -540,12 +540,13 @@ document.addEventListener("DOMContentLoaded", function() {
   </div>
 </div>
 
-
-
+<div style="min-height: 60px;"></div>
+<div class="desktop-only">
 <div
 id="monCarrousel"
-class="carousel slide mt-2 mb-5"
+class="carousel slide"
 data-bs-ride="carousel"
+style="min-height: 500px;"
 >
 <div class="carousel-inner">
   <div class="carousel-item active">
@@ -630,19 +631,20 @@ data-bs-ride="carousel"
   <span class="visually-hidden">Suivant</span>
 </button>
 </div>
+</div>
 <style>
 @media (min-width: 550px) {
   #monCarrousel {
     width: 70%; /* Largeur du carrousel */
     margin: auto; /* Centrer le carrousel horizontalement */
-    height: 300px; /* Hauteur fixe du carrousel */
+    height: 430px; /* Hauteur fixe du carrousel */
     overflow: hidden; /* Masquer les parties des images qui dépassent */
   }
 
   #monCarrousel .carousel-inner .carousel-item img {
     width: 100%; /* Faire en sorte que les images prennent toute la largeur du carrousel */
     object-fit: cover; /* Couvrir la hauteur fixe sans perdre les proportions */
-    height: 300px; /* Hauteur fixe pour les images */
+    height: 430px; /* Hauteur fixe pour les images */
   }
 }
 @media (max-width: 550px) {
