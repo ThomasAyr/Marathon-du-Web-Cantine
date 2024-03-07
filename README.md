@@ -8,13 +8,13 @@ Cette application web est développée à l'initiative de la ville de Montpellie
   
 - **Propositions de Menus Complémentaires** : Sur la base du repas du midi, l'application suggère des menus pour le repas du soir. Ces suggestions visent à compléter l'alimentation de la journée par des recettes équilibrées, tenant compte du degré de transformation des aliments consommés à midi.
   
-- **Création Automatique de Repas Équilibrés** : Grâce à un outil intégré, l'application est capable de générer automatiquement des idées de repas variés et équilibrés. Cet outil prend en compte les besoins nutritionnels spécifiques des enfants en fonction de leur âge et de leur activité physique.
+- **Présentation des statistiques** sur les données alimentaires.
 
 ## Technologies Utilisées
 L'application est développée comme une application web, accessible via un navigateur internet sur divers appareils (ordinateurs, tablettes, smartphones).
 
-- **Frontend** : HTML, CSS, et JavaScript.
-- **Base de données** : Base de données à définir.
+- **Frontend** : HTML, CSS, et JavaScript (D3 pour les graphiques).
+- **Données** : Format json.
 
 ## Composition de l'équipe de développement
 Étudiants de Master MIASHS : AYRIVIÉ Thomas (Coordonnateur), ANTA Claude, LO Magatte, LUKAU MAKIESE Salem. 
