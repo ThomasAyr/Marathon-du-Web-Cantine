@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="./css/menu.css" rel="stylesheet" />
+    <title>Menus</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="./Images/logo_cantine.png"
+            alt="Avatar Logo"
+            style="width: 80px"
+            class="rounded-circle mr-2"
+          />
+          <span class="font-weight-bold">Ma Cantine s'engage</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="../index.html">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="menu.html">Menu</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="semaine">
+      <select id="select-semaine">
+        <!-- Options de sélection de la semaine -->
+      </select>
+
+      <div id="menu-container">
+        <!-- Contenu du menu -->
+      </div>
+    </div>
+    <canvas id="chart"></canvas>
+
+    <script src="menu.js"></script>
+
+    <!--    A faire demain :
+   1. DES VISUALISATIONS 
+   2. FAIRE DES CSS SUR LA PAGE D'ACCCEUIL ET SUR LA PAGE MENU
+   3. LA PAGE GéNéRER MENU équilibrée
+   4. Générer menu soir à partir du menu Matin 
+-->
+  </body>
+</html>

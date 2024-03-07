@@ -3,147 +3,559 @@
 <head>
   <title>Ma Cantine s'engage</title>
   <link rel="icon" href="Logos/cantine.jpg" type="image/x-icon">
-  
+  <link rel="stylesheet" href="css/Cercle.css">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
   <script src="https://d3js.org/d3.v5.min.js"></script>
-  <style>
-    .bg-secondary-custom {
-      background-color: #c9e1af !important; /* Utilisez !important avec précaution */
-      
-    }
-    .p_special {
-      color:black;
-    }
-
-  .desktop-only {
-    display: none;
-  }
-
-  @media (min-width: 412px) {
-    .desktop-only {
-      display: inline;
-    }
-  }
-  </style>
-</head>
 </head>
 <body>
-  <div class="banner-image" style="width: 100%; overflow: hidden;">
-    <img src="Images/bandeau.png" alt="Bandeau sur l'alimentation" style="width: 100%;">
-  </div>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-secondary-custom">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-secondary-custom" style="height: 65px;">
         <div class="container">
-          <a class="navbar-brand d-flex align-items-center" href="index.html">
-            <img src="Logos/Montpellier.svg" alt="Montpellier Logo" style="height: 45px;"><img src="Logos/cantine.jpg" alt="Cantine Logo" style="height: 45px;">
-            <span class="font-weight-bold desktop-only" style="color:#11499F;"> Ma Cantine s'engage</span>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <div class="mobile-only">          
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="Logos/Montpellier.svg" alt="Montpellier Logo" style="height: 45px;"><img src="Logos/Logo_Ma_cantine_sengage__assiette.png" alt="Montpellier Logo" style="height: 45px;">
+          </a></div>
+
+          <div class="desktop-only">
+            <a class="navbar-brand d-flex align-items-center" href="index.html" style="position: relative; z-index: 1000; transform: translateY(16px);">
+            <img src="Logos/Montpellier.svg" alt="Montpellier Logo" style="height: 60px;"> <img class="desktop-only" src="Logos/Logo_Ma_cantine_sengage__assiette.png" alt="Cantine Logo" style="height: 70px;">
+          </a></div>
+          
+          <button style="background-color: #f7e8d8 !important;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
+
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav" style="background-color: #f8e9d9; text-align: center; ">
               <li class="nav-item">
-                <a class="nav-link active" style="color: #11499F;" href="index.html">Zoom sur le projet</a>
+                <a class="nav-link active" style="color: #1D4764;" href="index.html">Le projet</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" style="color: #11499F;" href="menu.html">Zoom sur les menus</a>
+                <a class="nav-link" style="color: #1D4764;" href="menu.html">Au menu</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" style="color: #11499F;" href="menu.html">Proposition de recettes</a>
+                <a class="nav-link" style="color: #1D4764;" href="">Recettes</a>
               </li>
+          <!--   <li class="nav-item">
+                <a class="nav-link" style="color: #1D4764;" href="">En chiffres</a>
+              </li>-->
             </ul>
           </div>
         </div>
       </nav>
-      
-      <div class="container mt-5 mb-5">
-        <p class="lead"><b>Plongez au cœur des cantines de Montpellier !</b> Explorez la provenance, la diversité et la qualité exceptionnelle des aliments qui composent les repas de vos enfants. Découvrez des recettes savoureuses.</p>
-        <p class="lead">Notre site vous offre une <b>fenêtre transparente</b> sur nos pratiques d'approvisionnement locales, notre lutte contre les aliments ultra-transformés, et notre volonté de promouvoir le bien-manger dès le plus jeune âge.</p>
+      <div class="banner-image" style="width: 100%; overflow: hidden;">
+        <img src="Images/bandeau.png" alt="Bandeau sur l'alimentation" style="width: 100%;">
       </div>
 
-
+      <div class="container mt-5 mb-5">
+        <text class="titre">
+          Ma Cantine s’engage !
+        </text>
+        <p class="lead mt-2" style="color: #1D4764;">Moment de partage, d’apprentissage et de découverte des saveurs, la pause méridienne est
+          un temps particulièrement important pour les enfants. C’est pourquoi la Ville de Montpellier porte des valeurs fortes pour la restauration scolaire avec l’objectif d’offrir des repas de qualité à des tarifs justes et équitables dans les 87 cantines des écoles montpelliéraines.</p>
+          
+          <a href="#6" class="btn-label">
+            Découvrir le projet
+          </a>
+          
+    
+        </div>
 
       <div class="bg-secondary-custom text-white py-4">
         <div class="container mt-4 mb-1">
           <div class="row">
             <div class="col-sm-4 d-flex flex-column justify-content-between mb-3">
-              <h3 style="color:#b0b03b;"><i class="fa-solid fa-school"></i> <span id="restaurants-scolaires">0</span> restaurants scolaires dont 14 en self</h3>
-              <p class="p_special">Chaque jour, les repas sont livrés en circuit direct dans les restaurants scolaires et selfs, assurant fraîcheur et qualité.</p>
+              <h1 style="color: #59c859; text-align: center; font-weight: bold;"><span id="repas-bio">0</span>%</h1>
+              <h4 style="color: #59c859; text-align: center;">de produits durables</h4>
+              <p class="p_special">D'ici 2025, conformément à la loi EGALIM et notre politique, 100% de nos produits seront locaux et/ou durables.</p>
             </div>
             <div class="col-sm-4 d-flex flex-column justify-content-between mb-3">
-              <h3 style="color:#ff84fb;"><i class="fas fa-utensils" ></i> <span id="repas-mois" >0</span> repas produits par jour</h3>
-              <p class="p_special">Les repas sont préparés quotidiennement à Montpellier dans la cantine centrale de la Martelle.</p>
+              <h1 style="color: #1D4764; text-align: center; font-weight: bold;"><span id="restaurants-scolaires">0</span></h1>
+              <h4 style="color: #1D4764; text-align: center;">restaurants scolaires</h4>
+              <p class="p_special">Chaque jour, les repas frais et de qualité sont livrés en circuit direct dans les restaurants scolaires dont 14 selfs.</p>
             </div>
             <div class="col-sm-4 d-flex flex-column justify-content-between mb-3">
-              <h3 style="color: #59c859;"><i class="fas fa-seedling"></i> <span id="repas-bio">0</span>% de produits durables</h3>
-              <p class="p_special">D'ici 2025, 100% de nos produits seront locaux et/ou durables, conformément à la loi EGALIM et notre politique.</p>
+              <h1 style="color: #c56376; text-align: center; font-weight: bold;"><span id="repas-mois" >0</span></h1>
+              <h4 style="color: #c56376; text-align: center;">repas produits par jour</h4>
+              <p class="p_special">Les repas sont préparés quotidiennement à Montpellier avec des produits frais dans la cantine centrale de la Martelle.</p>
             </div>
           </div>
         </div>        
       </div>
-      
 
-      <div class="container mt-5 mb-4">
-        <div class="container mt-3">
-          <img src="Images/graphe.png" alt="Avatar Logo" style="width:100%;" class="rounded-pill">
+      <div class="citation-container d-flex flex-column justify-content-center align-items-center" style="min-height: 100vh;">
+        <div style="text-align: center;">
+          <i class="fa-solid fa-quote-left" style="font-size: 66px; color: #c56376;"></i>
+        </div>
+        <div class="centered-text">
+          En 2024, Ma Cantine s’engage à servir 75% de produits BIO et/ou locaux de qualité pour atteindre les 100% en 2026.
         </div>
       </div>
+      
+      <style>
+        .citation-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      </style>
+
+      <!--ONGLET-->
+    <div class="bg-secondary-custom">
+    <div class="container" style="background-color: #f7e8d8;">
+      <div class="tabs">
+        <button class="tablink" onclick="openTab(event, 'Contenu1')">Dans les menus</button>
+        <button class="tablink" onclick="openTab(event, 'Contenu2')">Dans les ingrédients</button>
+      </div>
+      
+      <div id="Contenu1" class="tabcontent">
+
+        <div class="container mt-5">
+        <h3 style="color:#1d4764">Répartition du niveau de transformation par gramme d'aliments dans les menus</h3>
+        </div>
+
+        <iframe class="mobile-only" src="graphe_mobile.html" style="overflow:hidden;" width="370" height="220" frameborder="0"></iframe>
+        <iframe class="desktop-only" src="graphe.html" style="overflow:hidden;" width="970" height="430" frameborder="0"></iframe>
+        
+        <div class="container mb-5">
+        <ul>
+          <li>
+            <strong>Classe 1 :</strong> Cette catégorie correspond aux aliments bruts ou peu transformés. C’est le cas pour les tomates cerises cultivées à Lattes que nous servons.
+          </li>
+          <li>
+            <strong>Classe 2 :</strong> En deuxième position nous trouvons les ingrédients culinaires tels que le beurre, le sucre ou le vinaigre blanc.
+          </li>
+          <li>
+            <strong>Classe 3 :</strong> Cette catégorie correspond aux aliments transformés tels que la purée de pomme de terre, les chips…
+          </li>
+          <li>
+            <strong>Classe 4 :</strong> Enfin, la catégorie 4 rassemble l’ensemble des aliments ultra-transformés. C’est le cas de produits comme la vinaigrette, les pêches au sirop.
+          </li>
+        </ul>
+        </div>
+      </div>
+      
+
+
+      <div id="Contenu2" class="tabcontent">
+        <div class="container mt-5 mb-4">
+          <h3 style="color:#1d4764">Répartition des aliments selon leur niveau de transformation par nombre</h3>
+          en cours
+          </div>
+          
+      </div>
+    </div>
+  </div>
+<style>
+  .tablink {
+    background-color: #c56376;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 14px;
+    font-size: 17px;
+    width: 50%;
+    font-weight: bold;
+  }
+  
+  /* Style du contenu des onglets */
+  .tabcontent {
+    color: c56376;
+    display: none;
+    padding: 50px 20px;
+    height: 100%;
+  }
+  
+  /* Style pour l'onglet actif */
+  .tablink.active {
+    background-color: #f8e9d9;
+    color :#1D4764;
+    font-weight: bold;
+  }
+       
+</style>
+      
+<script>function openTab(evt, tabName) {
+  // Cache tous les éléments avec la classe "tabcontent" par défaut
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Supprime la classe "active" de tous les éléments avec la classe "tablink"
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Montre le contenu de l'onglet courant et ajoute une classe "active" au bouton qui a ouvert l'onglet
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Mettre le premier onglet actif par défaut
+document.addEventListener("DOMContentLoaded", function() {
+  // Simule un clic sur le premier onglet
+  document.querySelector(".tablink").click();
+});
+</script>
+      
+<div class="citation-container d-flex flex-column justify-content-center align-items-center" style="min-height: 100vh;">
+  <div style="text-align: center;">
+    <i class="fa-solid fa-magnifying-glass" style="font-size: 66px; color: #c56376;"></i>
+  </div>
+  <div class="centered-textcenter" style="">
+  Zoom sur le pain biologique
+  </div>
+  <iframe class="desktop-only" width="560" height="315" src="https://www.youtube.com/embed/QjELpFcLBhU?si=Yy1_Rep3rgInLS5U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <iframe class="mobile-only" style="width: 70%;" src="https://www.youtube.com/embed/QjELpFcLBhU?si=Yy1_Rep3rgInLS5U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+</div>
+
+
+  <div class="bg-secondary-custom py-4">
+    <div class="container mt-4 mb-4">
+    <text class="titre">
+      Ma Cantine s’engage !
+    </text>
+    <p class="lead mt-2" style="color: #1D4764;">
+      Explorez notre approche hebdomadaire pour réinventer votre expérience culinaire à la maison.<br>L'état des menus de midi combinés à des recettes équilibrées et variées pour le soir.</p>
+      <a href="menu.html" class="btn-label">
+        J'y vais !
+      </a>
+    </div>
+  </div>
+
+
+  <div style="margin-bottom: 10rem;"> </div>
+
+
+      <!-------CERCLE------------->
+      <div class="container mt-5 mb-5" id="6">
+        <div class="citation-container d-flex flex-column justify-content-center align-items-center" style="min-height: 30vh;">
+          <div style="text-align: center;">
+            <i class="fas fa-utensils" style="font-size: 66px; color: #c56376;"></i>
+          </div>
+          <div class="centered-textcenter" style="margin-bottom: 6rem;">
+            Les 6 engagements<br>de la politique alimentaire
+          </div>
+      <div class="desktop-only">
+      <div class="body" >
+        <div class="container-cercle">
+          <div class="circle-container">
+            <div class="hidden-text" id="text-acheter" style="display: none">
+              Préserver <span class="surligne">l’agroécologie</span> du territoire et introduire des produits issus de <span class="surligne2">l’agriculture biologique et/ou locaux</span>.
+            </div>
+            <div class="hidden-text" id="text-decider" style="display: none">
+              Développer une <span class="surligne">gouvernance participative</span> et une politique de transparence à <span class="surligne2">l’égard des familles</span>.
+            </div>
+            <div class="hidden-text" id="text-partager" style="display: none">
+              Développer une <span class="surligne">tarification solidaire</span> de la restauration scolaire et une <span class="surligne2">politique de dons</span> conventionnés.
+            </div>
+            <div class="hidden-text" id="text-sensibiliser" style="display: none">
+              Promouvoir <span class="surligne">l’alimentation durable</span> et la lutte contre le <span class="surligne2">gaspillage alimentaire</span> auprès des enfants, parents et professionnels.
+            </div>
+            <div class="hidden-text" id="text-manger" style="display: none">
+              Proposer des<span class="surligne"> repas durables et responsables</span> distribués par des personnels formés à <span class="surligne2">l’approche hôtelière</span>.        
+            </div>
+            <div class="hidden-text" id="text-cuisiner" style="display: none">
+              Construire un <span class="surligne">plan alimentaire durable et flexitarien</span> composé de cycles de <span class="surligne2">menus de saison</span>.
+            </div>
+    
+            <div class="label" id="acheter">Bien acheter</div>
+            <div class="label" id="decider">Bien décider</br>et expliquer</div>
+            <div class="label" id="partager">Bien partager</div>
+            <div class="label" id="sensibiliser">Bien sensibiliser</div>
+            <div class="label" id="manger">Bien manger</div>
+            <div class="label" id="cuisiner">Bien cuisiner</div>
+            <img
+              src="Logos/Logo_Ma_cantine_sengage__assiette.png"
+              alt="Logo Ma Cantine"
+              style="height: 40%; width: auto"
+              class="center-logo"
+            />
+          </div>
+        </div>
+      </div>
+    
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const labels = document.querySelectorAll(".label");
+    
+            labels.forEach((label) => {
+              const id = label.getAttribute("id");
+              const textId = "text-" + id;
+    
+              label.addEventListener("mouseenter", () => {
+                document.querySelector(".center-logo").style.display = "none";
+                document.getElementById(textId).style.display = "block";
+              });
+    
+              label.addEventListener("mouseleave", () => {
+                document.querySelector(".center-logo").style.display = "block";
+                document.getElementById(textId).style.display = "none";
+              });
+            });
+            labels.forEach((label) => {
+              label.addEventListener("mouseenter", () => {
+                label.style.backgroundColor = "#c56376";
+              });
+    
+              label.addEventListener("mouseleave", () => {
+                label.style.backgroundColor = ""; // Reset to default or previous color
+              });
+            });
+          });
+        </script>
+        </div>
+      </div>
+
+      <div class="mobile-only">
+        <style>
+          .carrousel-container {
+            position: relative;
+            width: 330px;
+            height: 330px;
+            margin: 40px auto;
+            overflow: hidden;
+          }
+          .container-cercle-CAROU {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: #f9efe2;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            top: 0;
+            left: 0;
+          }
+          .container-cercle-CAROU.active {
+            display: flex;
+          }
+          #prev,
+          #next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #f9efe2;
+            color: #c56376;
+            border: none;
+            padding: 5px 5px;
+            cursor: pointer;
+            font-size: 20px;
+          }
+          #prev {
+            left: 10px;
+          }
+          #next {
+            right: 10px;
+          }
+          .titreCAROU {
+            position: absolute;
+            width: 120px; /* Adjust size as needed */
+            text-align: center;
+            padding: 5px;
+            border-bottom: 2px solid #c56376;
+            padding-bottom: 0.4cm;
+            color: #c56376;
+            z-index: 10;
+            top: 10%;
+            left: 32%;
+            size: 35px;
+            font-weight: bold;
+          }
+          .texteCAROU {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 9;
+            max-width: 600px;
+            height: 35%;
+            justify-content: center;
+            align-items: center;
+          }
+        </style>
+        <div class="carrousel-container">
+          <div class="container-cercle-CAROU active">
+            <div class="titreCAROU">Bien acheter</div>
+            <div class="texteCAROU">
+              Préserver <span class="surligne">l’agroécologie</span> du territoire
+              et introduire des produits issus de
+              <span class="surligne2">l’agriculture biologique et/ou locaux</span>.
+            </div>
+          </div>
+    
+          <div class="container-cercle-CAROU">
+            <div class="titreCAROU">Bien décider</div>
+            <div class="texteCAROU">
+              Développer une
+              <span class="surligne">gouvernance participative</span> et une
+              politique de transparence à
+              <span class="surligne2">l’égard des familles</span>.
+            </div>
+          </div>
+    
+          <div class="container-cercle-CAROU">
+            <div class="titreCAROU">Bien partager</div>
+            <div class="texteCAROU">
+              Développer une <span class="surligne">tarification solidaire</span> de
+              la restauration scolaire et une
+              <span class="surligne2">politique de dons</span> conventionnés.
+            </div>
+          </div>
+    
+          <div class="container-cercle-CAROU">
+            <div class="titreCAROU">Bien sensibiliser</div>
+            <div class="texteCAROU">
+              Promouvoir <span class="surligne">l’alimentation durable</span> et la
+              lutte contre le
+              <span class="surligne2">gaspillage alimentaire</span> auprès des
+              enfants, parents et professionnels.
+            </div>
+          </div>
+    
+          <div class="container-cercle-CAROU">
+            <div class="titreCAROU">Bien manger</div>
+            <div class="texteCAROU">
+              Proposer des<span class="surligne">
+                repas durables et responsables</span
+              >
+              distribués par des personnels formés à
+              <span class="surligne2">l’approche hôtelière</span>.
+            </div>
+          </div>
+    
+          <div class="container-cercle-CAROU">
+            <div class="titreCAROU">Bien cuisiner</div>
+            <div class="texteCAROU">
+              Construire un
+              <span class="surligne">plan alimentaire durable et flexitarien</span>
+              composé de cycles de <span class="surligne2">menus de saison</span>.
+            </div>
+          </div>
+    
+          <div class="container-cercle-CAROU">
+            <div class="texteCAROU">
+              <img
+                src="./Logos/Logo_Ma_cantine_sengage__assiette.png"
+                alt="Logo cantine"
+                style="width: 150px; height: auto"
+              />
+            </div>
+          </div>
+    
+          <button id="prev">←</button>
+          <button id="next">→</button>
+        </div>
+    
+        <script>
+          let currentCircle = 0;
+          const circles = document.querySelectorAll(".container-cercle-CAROU");
+          document.getElementById("prev").onclick = () => {
+            circles[currentCircle].classList.remove("active");
+            currentCircle = (currentCircle - 1 + circles.length) % circles.length;
+            circles[currentCircle].classList.add("active");
+          };
+          document.getElementById("next").onclick = () => {
+            circles[currentCircle].classList.remove("active");
+            currentCircle = (currentCircle + 1) % circles.length;
+            circles[currentCircle].classList.add("active");
+          };
+        </script>
+    
+      </div>
+    </div>
+    <!-- --------------------------------------------- -->
 
   </div>
 </div>
 
-<br>
-<footer class="bg-success text-white py-4">
-  <div class="container mb-3">
-    <h3 style="color:#c9e1af;"><i class="fas fa-utensils" ></i>  Six piliers pour une alimentation responsable</h3>
+<div style="margin-bottom: 10rem;"> </div>
+
+
+<div class="bg-secondary-custom py-5">
+  <div class="container mb-4">
   </div>
     <div class="container">
       <div class="row">
         <div class="col-md-4">
-          <h5>Bien acheter</h5>
-          <p>Préserver l’agroécologie du territoire et introduire des produits issus de l’agriculture biologique et/ou locaux.
-          </p>
+          <img src="Logos/Montpellier.svg" alt="Montpellier Logo" style="height: 70px;">  <img src="Logos/Logo_Ma_cantine_sengage__assiette.png" alt="Montpellier Logo" style="height: 70px;">
         </div>
         <div class="col-md-4">
-          <h5>Bien cuisiner</h5>
-          <p>Construire un plan alimentaire durable et flexitarien composé de cycles de menus de saison.</p>
+          
         </div>
+        <style>
+        .social-icons a {
+          font-size: 30px;
+          color: #c56376; /* Couleur des icônes */
+          text-decoration: none;
+          margin-right: 10px; 
+        }
+        #social-icons {
+          color: #c56376; /* Couleur des icônes */
+          text-decoration: none;
+          margin-right: 10px; 
+        }
+        </style>
         <div class="col-md-4">
-          <h5>Bien manger</h5>
-          <p>Proposer des repas durables et responsables distribués par des personnels formés à l’approche hôtelière.</p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/villedemontpellier/?locale=fr_FR" style="text-decoration: none;" target="_blank">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/villedemontpellier/?hl=fr" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/montpellier_?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+          </div>
         </div>
       </div>
-        <div class="row">
-          <div class="col-md-4">
-            <h5>Bien sensibiliser</h5>
-            <p>Promouvoir l’alimentation durable et la lutte contre le gaspillage alimentaire auprès des enfants, parents et professionnels.</p>
-          </div>
-          <div class="col-md-4">
-            <h5>Bien partager</h5>
-            <p>Développer une tarification solidaire de la restauration scolaire et une politique de dons conventionnés.</p>
-          </div>
-          <div class="col-md-4">
-            <h5>Bien décider et expliquer</h5>
-            <p>Développer une gouvernance participative et une politique de transparence à l’égard des familles.</p>
-          </div>
+      <div class="row">
+        <div class="col-md-4">
         </div>
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        <a class= style="margin-right: 10px;" id="social-icons" href="https://www.montpellier.fr">Ville de Montpellier</a>    
+        <a class= style="margin-right: 10px;" id="social-icons">Mentions légales</a>
+        </div>        
+      </div>
+      
     </div>
-  </footer>
+
+  </div>
+  <div class="banner-image" style="width: 100%; overflow: hidden;">
+    <img src="Images/bandeau.png" alt="Bandeau sur l'alimentation" style="width: 100%;">
+  </div>
 
   <script>
     // Fonction pour animer les chiffres dans des éléments <span>
     function animateNumber(id, endValue) {
       var span = document.querySelector(id);
       var currentNumber = 0;
-      var increment = endValue / 200; // Le nombre d'itérations est basé sur la durée de 2000ms et un intervalle de 10ms
+      var increment = endValue / 500; // Le nombre d'itérations est basé sur la durée de 2000ms et un intervalle de 10ms
       var timer = setInterval(function() {
         currentNumber += increment;
         if (currentNumber >= endValue) {
@@ -155,16 +567,16 @@
     }
   
     // Animer les chiffres au chargement de la page
-    animateNumber("#repas-mois", 15500);
+    animateNumber("#repas-mois", 16000);
     animateNumber("#repas-bio", 50);
-    animateNumber("#restaurants-scolaires", 87);
+    animateNumber("#restaurants-scolaires", 88);
   </script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     // Animer les chiffres après que le DOM soit chargé
-    animateNumber("#repas-mois", 15500);
+    animateNumber("#repas-mois", 16000);
     animateNumber("#repas-bio", 50);
-    animateNumber("#restaurants-scolaires", 87);
+    animateNumber("#restaurants-scolaires", 88);
   });
 </script>
   

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/Cercle.css">
+  </head>
+  <body>
+    <div class="body">
+    <div class="container-cercle">
+      <div class="circle-container">
+        <div class="hidden-text" id="text-acheter" style="display: none">
+          Préserver <span class="surligne">l’agroécologie</span> du territoire et introduire des produits issus de <span class="surligne2">l’agriculture biologique et/ou locaux</span>.
+        </div>
+        <div class="hidden-text" id="text-decider" style="display: none">
+          Développer une <span class="surligne">gouvernance participative</span> et une politique de transparence à <span class="surligne2">l’égard des familles</span>.
+        </div>
+        <div class="hidden-text" id="text-partager" style="display: none">
+          Développer une <span class="surligne">tarification solidaire</span> de la restauration scolaire et une <span class="surligne2">politique de dons</span> conventionnés.
+        </div>
+        <div class="hidden-text" id="text-sensibiliser" style="display: none">
+          Promouvoir <span class="surligne">l’alimentation durable</span> et la lutte contre le <span class="surligne2">gaspillage alimentaire</span> auprès des enfants, parents et professionnels.
+        </div>
+        <div class="hidden-text" id="text-manger" style="display: none">
+          Proposer des<span class="surligne"> repas durables et responsables</span> distribués par des personnels formés à <span class="surligne2">l’approche hôtelière</span>.        
+        </div>
+        <div class="hidden-text" id="text-cuisiner" style="display: none">
+          Construire un <span class="surligne">plan alimentaire durable et flexitarien</span> composé de cycles de <span class="surligne2">menus de saison</span>.
+        </div>
+
+        <div class="label" id="acheter">Bien acheter</div>
+        <div class="label" id="decider">Bien décider</br>et expliquer</div>
+        <div class="label" id="partager">Bien partager</div>
+        <div class="label" id="sensibiliser">Bien sensibiliser</div>
+        <div class="label" id="manger">Bien manger</div>
+        <div class="label" id="cuisiner">Bien cuisiner</div>
+        <img
+          src="Logos/Logo_Ma_cantine_sengage__assiette.png"
+          alt="Logo Ma Cantine"
+          style="height: 40%; width: auto"
+          class="center-logo"
+        />
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const labels = document.querySelectorAll(".label");
+
+        labels.forEach((label) => {
+          const id = label.getAttribute("id");
+          const textId = "text-" + id;
+
+          label.addEventListener("mouseenter", () => {
+            document.querySelector(".center-logo").style.display = "none";
+            document.getElementById(textId).style.display = "block";
+          });
+
+          label.addEventListener("mouseleave", () => {
+            document.querySelector(".center-logo").style.display = "block";
+            document.getElementById(textId).style.display = "none";
+          });
+        });
+        labels.forEach((label) => {
+          label.addEventListener("mouseenter", () => {
+            label.style.backgroundColor = "#c56376";
+          });
+
+          label.addEventListener("mouseleave", () => {
+            label.style.backgroundColor = ""; // Reset to default or previous color
+          });
+        });
+      });
+    </script>
+    </div>
+  </body>
+</html>

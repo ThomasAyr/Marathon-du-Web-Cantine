@@ -1,103 +1,100 @@
+@font-face {
+  font-family: "GothamNarrow-Book";
+  src: url("./css/GothamNarrow-Book.otf") format("opentype");
+}
 body {
-    background-color: #ffffff; /* Couleur de fond par défaut */
+  font-family: "GothamNarrow-Book", sans-serif;
+  color: #1d4764;
+  background-color: #ffffff; /* Couleur de fond par défaut */
 }
 
 #semaine {
-    background-color: #d8dd43; /* Mettre en jaune la partie contenant le sélecteur et ses éléments enfants */
+  background-color: #f7e8d8; /* Mettre en jaune la partie contenant le sélecteur et ses éléments enfants */
 }
-
-
-.navbar-brand {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+#rr {
+  display: flex;
+  flex-wrap: wrap;
 }
-
-.navbar-nav {
-    flex-direction: row;
-    justify-content: flex-start;
+@media (min-width: 500px) {
+  .ll {
+    max-width: 25%; /* Assure que le contenu ne déborde pas, ajustez ce pourcentage comme nécessaire */
+    justify-content: center;
+  }
+  .desktop-only {
+    display: inline;
+  }
 }
-
-.navbar-toggler {
-    order: -1;
+@media (max-width: 500px) {
+  .ll {
+    max-width: 100%; /* Assure que le contenu ne déborde pas, ajustez ce pourcentage comme nécessaire */
+    justify-content: center;
+    .mobile-only {
+      display: inline;
+    }
+  }
 }
-
-
-
-
 
 #menu-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Aligner les éléments en haut */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Aligner les éléments en haut */
 }
 
 .menu {
-   
-    background-color: white;
-    padding: 20px;
-    border: 1px solid #ccc;
-    width: 280px; /* Largeur fixe pour chaque élément de menu */
-    height: 300px; /* Hauteur fixe pour chaque élément de menu */
-    margin-bottom: 20px; /* Ajouter de l'espace entre les menus */
-    margin: 0 5px 20px;
-    overflow: auto; /* Ajouter le défilement automatique si le contenu dépasse */
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  width: 280px; /* Largeur fixe pour chaque élément de menu */
+  height: 300px; /* Hauteur fixe pour chaque élément de menu */
+  margin-bottom: 20px; /* Ajouter de l'espace entre les menus */
+  margin: 0 5px 20px;
+  overflow: auto; /* Ajouter le défilement automatique si le contenu dépasse */
 }
 
 .jour-image {
-    width: 280px; /* Largeur fixe pour chaque image */
-    height: auto; /* Conserver le ratio de l'image */
-    z-index: 1; /* Placer l'image derrière le cadre */
+  width: 280px; /* Largeur fixe pour chaque image */
+  height: auto; /* Conserver le ratio de l'image */
+  z-index: 1; /* Placer l'image derrière le cadre */
 }
 
-
-
-
 .menu h2 {
-    font-size: 18px;
-    margin: 3px 0px 10px;
-    color: #333;
+  font-size: 18px;
+  margin: 3px 0px 10px;
+  color: #333;
 }
 
 #select-semaine {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-    display: block; /* Assurez-vous que le sélecteur est affiché comme un bloc pour appliquer les marges automatiques */
-    top: 20%;
-    padding: 8px;
-    font-size: 16px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    color: #333;
-    outline: none;
-    transition: border-color 0.3s ease;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  display: block; /* Assurez-vous que le sélecteur est affiché comme un bloc pour appliquer les marges automatiques */
+  top: 20%;
+  padding: 8px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s ease;
 }
 
 #select-semaine:hover,
 #select-semaine:focus {
-    border-color: #66afe9;
+  border-color: #66afe9;
 }
 
 #select-semaine option {
-    background-color: #fff;
-    color: #333;
+  background-color: #fff;
+  color: #333;
 }
 
 #select-semaine option:hover,
 #select-semaine option:focus {
-    background-color: #66afe9;
-    color: #fff;
+  background-color: #66afe9;
+  color: #fff;
 }
 
 #select-semaine::-ms-expand {
-    display: none; /* Masquer la flèche du menu déroulant dans IE */
-}
-
-.navbar {
-    margin-bottom: 10px;
-    top: 0;
-    left: 0;
-    right: 0;
+  display: none; /* Masquer la flèche du menu déroulant dans IE */
 }

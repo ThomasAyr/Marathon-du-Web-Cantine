@@ -29,7 +29,7 @@
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
-     bordercolor="#666666"
+     bordercolor="#c56376"
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
@@ -61,7 +61,7 @@
      transform="translate(-309.21527,-389.92602)">
     <path
        d="M 309.21527,423.36977 L 336.35027,423.36977 L 336.35027,417.47915 L 309.21527,417.47915 L 309.21527,423.36977 z"
-       style="fill:#061620;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       style="fill:#c56376;fill-opacity:1;fill-rule:nonzero;stroke:none"
        id="path569" />
     <g
        id="g571"
@@ -76,7 +76,7 @@
        transform="matrix(1.2500576,0,0,-1.25,309.21527,405.84852)">
       <path
          d="M 0,0 L 0,-8.972 L 21.707,-8.972 L 21.707,0 L 16.249,0 L 16.622,-4.725 C 16.773,-6.036 16.622,-6.236 17,-6.236 L 17.849,-6.236 L 17.849,-6.833 L 13.192,-6.833 L 13.192,-6.236 C 13.999,-6.227 14.089,-6.236 14.089,-6.078 L 13.534,1.336 L 10.388,-6.473 C 10.314,-6.648 10.278,-6.804 10.12,-6.804 C 10.01,-6.804 9.963,-6.693 9.931,-6.614 L 6.814,0.597 L 6.31,-5.213 C 6.253,-6.007 6.179,-6.227 6.782,-6.236 L 7.315,-6.236 L 7.315,-6.833 L 4.388,-6.833 L 4.388,-6.236 L 4.954,-6.236 C 5.096,-6.236 5.285,-6.236 5.285,-6.078 L 5.749,0 L 0,0"
-         style="fill:#11499f;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         style="fill:#c56376;fill-opacity:1;fill-rule:nonzero;stroke:none"
          id="path577" />
     </g>
     <g
@@ -84,7 +84,7 @@
        transform="matrix(1.25,0,0,-1.25,309.21777,389.92602)">
       <path
          d="M 0,0 L 21.706,0 L 21.706,-12.508 L 16.247,-12.503 L 16.065,-10.159 C 16.097,-9.86 16.143,-9.86 16.364,-9.86 L 16.915,-9.86 L 16.915,-9.262 L 13.403,-9.262 L 10.84,-15.748 L 8.12,-9.262 L 4.454,-9.262 L 4.454,-9.86 C 5.348,-9.866 5.968,-9.764 5.881,-10.871 L 5.762,-12.503 L -0.002,-12.508 L 0,0"
-         style="fill:#11499f;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         style="fill:#c56376;fill-opacity:1;fill-rule:nonzero;stroke:none"
          id="path581" />
     </g>
     <g

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/Cercle.css" />
+    <style>
+      .carrousel-container {
+        position: relative;
+        width: 330px;
+        height: 330px;
+        margin: 40px auto;
+        overflow: hidden;
+      }
+      .container-cercle-CAROU {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: #f9efe2;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        top: 0;
+        left: 0;
+      }
+      .container-cercle-CAROU.active {
+        display: flex;
+      }
+      #prev,
+      #next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #f9efe2;
+        color: #c56376;
+        border: none;
+        padding: 5px 5px;
+        cursor: pointer;
+        font-size: 20px;
+      }
+      #prev {
+        left: 10px;
+      }
+      #next {
+        right: 10px;
+      }
+      .titreCAROU {
+        position: absolute;
+        width: 120px; /* Adjust size as needed */
+        text-align: center;
+        padding: 5px;
+        border-bottom: 2px solid #c56376;
+        padding-bottom: 0.4cm;
+        color: #c56376;
+        z-index: 10;
+        top: 10%;
+        left: 28%;
+        size: 35px;
+        font-weight: bold;
+      }
+      .texteCAROU {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 9;
+        max-width: 600px;
+        height: 35%;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carrousel-container">
+      <div class="container-cercle-CAROU active">
+        <div class="titreCAROU">Bien acheter</div>
+        <div class="texteCAROU">
+          Préserver <span class="surligne">l’agroécologie</span> du territoire
+          et introduire des produits issus de
+          <span class="surligne2">l’agriculture biologique et/ou locaux</span>.
+        </div>
+      </div>
+
+      <div class="container-cercle-CAROU">
+        <div class="titreCAROU">Bien décider et expliquer</div>
+        <div class="texteCAROU">
+          Développer une
+          <span class="surligne">gouvernance participative</span> et une
+          politique de transparence à
+          <span class="surligne2">l’égard des familles</span>.
+        </div>
+      </div>
+
+      <div class="container-cercle-CAROU">
+        <div class="titreCAROU">Bien partager</div>
+        <div class="texteCAROU">
+          Développer une <span class="surligne">tarification solidaire</span> de
+          la restauration scolaire et une
+          <span class="surligne2">politique de dons</span> conventionnés.
+        </div>
+      </div>
+
+      <div class="container-cercle-CAROU">
+        <div class="titreCAROU">Bien sensibiliser</div>
+        <div class="texteCAROU">
+          Promouvoir <span class="surligne">l’alimentation durable</span> et la
+          lutte contre le
+          <span class="surligne2">gaspillage alimentaire</span> auprès des
+          enfants, parents et professionnels.
+        </div>
+      </div>
+
+      <div class="container-cercle-CAROU">
+        <div class="titreCAROU">Bien manger</div>
+        <div class="texteCAROU">
+          Proposer des<span class="surligne">
+            repas durables et responsables</span
+          >
+          distribués par des personnels formés à
+          <span class="surligne2">l’approche hôtelière</span>.
+        </div>
+      </div>
+
+      <div class="container-cercle-CAROU">
+        <div class="titreCAROU">Bien cuisiner</div>
+        <div class="texteCAROU">
+          Construire un
+          <span class="surligne">plan alimentaire durable et flexitarien</span>
+          composé de cycles de <span class="surligne2">menus de saison</span>.
+        </div>
+      </div>
+
+      <div class="container-cercle-CAROU">
+        <div class="texteCAROU">
+          <img
+            src="./Logos/Logo_Ma_cantine_sengage__assiette.png"
+            alt="Logo cantine"
+            style="width: 150px; height: auto"
+          />
+        </div>
+      </div>
+
+      <button id="prev">←</button>
+      <button id="next">→</button>
+    </div>
+
+    <script>
+      let currentCircle = 0;
+      const circles = document.querySelectorAll(".container-cercle-CAROU");
+      document.getElementById("prev").onclick = () => {
+        circles[currentCircle].classList.remove("active");
+        currentCircle = (currentCircle - 1 + circles.length) % circles.length;
+        circles[currentCircle].classList.add("active");
+      };
+      document.getElementById("next").onclick = () => {
+        circles[currentCircle].classList.remove("active");
+        currentCircle = (currentCircle + 1) % circles.length;
+        circles[currentCircle].classList.add("active");
+      };
+    </script>
+  </body>
+</html>

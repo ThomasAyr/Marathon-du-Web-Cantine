@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr" style="margin: 0; padding: 0">
+  <head style="margin: 0; padding: 0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Données des Menus</title>
+    <style>
+      .tooltip {
+        position: absolute;
+        text-align: center;
+        font: 12px sans-serif;
+        background: lightsteelblue;
+        border: 0px;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .svg-container {
+        position: relative;
+        /* Reste de votre CSS */
+      }
+    </style>
+  </head>
+  <body style="margin: 0; padding: 0">
+    <div id="graphique" style="margin: 0; padding: 0"></div>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <div id="donnees"></div>
+
+    <script>
+      async function chargerEtTraiterDonnees() {
+        try {
+          const reponse = await fetch("../Donnees/donnees_menus.json");
+          if (!reponse.ok) {
+            throw new Error("Erreur de chargement du fichier JSON");
+          }
+          const donneesMenus = await reponse.json();
+
+          function sommePoidsParDPA(donnees) {
+            const resultats = donnees.map((semaine, index) => {
+              const sommeParDPA = {};
+              let sommeTotaleSemaine = 0;
+
+              // Premièrement, calculez la somme totale pour la semaine
+              semaine.jours.forEach((jour) => {
+                jour.recettes.forEach((recette) => {
+                  recette.details.forEach((detail) => {
+                    const { DPA, Poids } = detail;
+                    if (!sommeParDPA[DPA]) {
+                      sommeParDPA[DPA] = 0;
+                    }
+                    sommeParDPA[DPA] += Poids;
+                    sommeTotaleSemaine += Poids; // Ajoutez au total de la semaine
+                  });
+                });
+              });
+
+              // Convertissez ensuite chaque somme en proportion
+              Object.keys(sommeParDPA).forEach((DPA) => {
+                sommeParDPA[DPA] =
+                  (sommeParDPA[DPA] / sommeTotaleSemaine) * 100;
+              });
+
+              return {
+                no_semaine: index + 1,
+                sommeParDPA,
+              };
+            });
+            return resultats;
+          }
+
+          const resultats = sommePoidsParDPA(donneesMenus);
+
+          creerVisualisation(resultats, 350, 200); // Assurez-vous que cette fonction existe et est prête à être utilisée
+        } catch (e) {
+          console.error(e);
+          document.getElementById("donnees").textContent =
+            "Erreur lors du chargement des données.";
+        }
+      }
+      // Création d'une div pour l'info-bulle, cachée par défaut
+      var tooltip = d3
+        .select("#graphique")
+        .append("div")
+        .attr("class", "tooltip")
+        .style("opacity", 0)
+        .style("position", "absolute")
+        .style("background", "lightsteelblue")
+        .style("padding", "5px")
+        .style("border-radius", "5px")
+        .style("text-align", "center")
+        .style("font", "12px sans-serif")
+        .style("pointer-events", "none");
+
+      function creerVisualisation(data, fixedWidth, fixedHeight) {
+        //const fixedWidth = 960;
+        //const fixedHeight = 500;
+        // Mapping pour les clés
+        const keyMapping = {
+          1: "Aliments bruts, peu transformés",
+          2: "Ingédients culinaires",
+          3: "Aliments transformés",
+          4: "Aliments ultra-transformés",
+        };
+        // Tableau de couleurs personnalisées pour les couches
+        const colorScheme = ["#a6bddb", "#74a9cf", "#2b8cbe", "#045a8d"];
+
+        // Configuration de la taille et des marges du graphique
+        var margin = { top: 20, right: 30, bottom: 40, left: 40 },
+          width = fixedWidth - margin.left - margin.right,
+          height = fixedHeight - margin.top - margin.bottom;
+
+        // Création du canvas SVG
+        var svg = d3
+          .select("#graphique")
+          .append("svg")
+          .attr("width", width + margin.left + margin.right)
+          .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+          .attr(
+            "transform",
+            "translate(" + margin.left + "," + margin.top + ")"
+          );
+
+        // Échelles pour les axes X et Y
+        var x = d3
+          .scaleBand()
+          .domain(data.map((d) => d.no_semaine))
+          .range([0, width])
+          .padding(0.1);
+
+        var y = d3
+          .scaleLinear()
+          .domain([0, 100]) // de 0 à 100 pour l'axe des Y
+          .range([height, 0]);
+
+        svg.append("g").call(d3.axisLeft(y));
+
+        // Préparation des données pour l'empilement
+        var keys = ["1", "2", "3", "4"]; // Ordre inversé pour l'empilement
+        var stack = d3
+          .stack()
+          .keys(keys)
+          .order(d3.stackOrderNone)
+          .offset(d3.stackOffsetNone);
+
+        // Processus d'empilement des données
+        var series = stack(
+          data.map((d) => ({ ...d.sommeParDPA, no_semaine: d.no_semaine }))
+        );
+
+        // Création des aires pour chaque série
+        var area = d3
+          .area()
+          .x(function (d) {
+            return x(d.data.no_semaine);
+          })
+          .y0(function (d) {
+            return y(d[0]);
+          })
+          .y1(function (d) {
+            return y(d[1]);
+          });
+
+        // Création des couches du graphique
+        svg
+          .selectAll(".layer")
+          .data(series)
+          .enter()
+          .append("path")
+          .attr("class", "layer")
+          .attr("d", area)
+          .style("fill", function (d, i) {
+            return colorScheme[i];
+          })
+          .on("mouseover", function (d) {
+            // 'this' est l'élément sur lequel le survol se produit, par exemple le chemin d'une aire.
+            var mouseCoords = d3.mouse(this);
+
+            tooltip.transition().duration(200).style("opacity", 0.9);
+
+            var content = `<b>${keyMapping[d.key]} :</b>
+        <br/>(Marqueur d’Ultra Transformation ${d.key})`;
+
+            tooltip
+              .html(content)
+              .style("left", mouseCoords[0] + 10 + "px") // Coordonnées x par rapport à l'élément SVG
+              .style("top", mouseCoords[1] - 10 + "px"); // Coordonnées y par rapport à l'élément SVG
+          })
+
+          .on("mouseout", function (d) {
+            tooltip.transition().duration(500).style("opacity", 0);
+          });
+
+        // Ajout de l'axe X
+        svg
+          .append("g")
+          .attr("transform", "translate(0," + height + ")")
+          .call(d3.axisBottom(x));
+
+        // Ajout de l'axe Y à droite
+        svg.append("g").attr("transform", `translate(${width},0)`);
+
+        svg
+          .append("text")
+          .attr(
+            "transform",
+            "translate(" + width / 2 + " ," + (height + margin.top + 20) + ")"
+          )
+          .style("text-anchor", "middle") // Centre le texte
+          .text("Semaines");
+
+          svg
+          .append("text")
+          .attr("transform", "rotate(-90)") // Rotation pour aligner le texte verticalement
+          .attr("y", 0 - margin.left) // Positionnement à gauche de l'axe Y
+          .attr("x", 0 - height / 2) // Centrage du texte par rapport à la hauteur du graphique
+          .attr("dy", "1em") // Ajustement pour aligner correctement le texte
+          .style("text-anchor", "middle") // Alignement du texte au centre pour une lecture de haut en bas
+          .text("Proportion en %"); // Texte de la légende
+      }
+      }
+
+      chargerEtTraiterDonnees();
+    </script>
+  </body>
+</html>

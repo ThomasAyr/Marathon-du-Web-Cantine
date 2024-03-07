@@ -1,0 +1,220 @@
+@font-face {
+  font-family: "GothamNarrow-Book";
+  src: url("GothamNarrow-Book.otf") format("opentype");
+}
+body {
+  font-family: "GothamNarrow-Book", sans-serif;
+  color: #1d4764;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  font-family: "GothamNarrow-Book", sans-serif;
+}
+
+.container-cercle {
+  position: relative;
+  width: 450px; /* Taille initiale */
+  height: 450px; /* Taille initiale */
+}
+
+/* Adaptation pour les écrans plus petits que 550px */
+@media (max-width: 550px) {
+  .container-cercle {
+    width: 250px; /* Taille ajustée */
+    height: 250px; /* Taille ajustée */
+  }
+}
+
+.circle-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #f9efe2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.label {
+  position: absolute;
+  width: 120px; /* Adjust size as needed */
+  text-align: center;
+  padding: 5px;
+  background: #f7e8d8;
+  border: 2px solid #c56376;
+  color: #c56376;
+  z-index: 10;
+}
+
+.label:hover {
+  background-color: #c56376;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#acheter {
+  top: 0%;
+  left: calc(50% - 55px);
+}
+
+#decider {
+  top: 25%;
+  left: calc(93.3% - 55px);
+}
+
+#partager {
+  top: 75%;
+  left: calc(93.3% - 55px);
+}
+
+#sensibiliser {
+  top: calc(100% - 15px);
+  left: calc(50% - 55px);
+  width: 140px !important;
+}
+
+#manger {
+  top: 75%;
+  left: calc(6.7% - 35px);
+}
+
+#cuisiner {
+  top: 25%;
+  left: calc(6.7% - 35px);
+}
+
+.center-logo {
+  width: 150px; /* Adjust size as needed */
+  height: auto;
+  z-index: 5;
+}
+
+.hidden-text {
+  display: none; /* Masqué par défaut */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 9; /* Derrière le logo lorsqu'il est affiché */
+}
+
+.surligne {
+  color: #1d4764;
+  font-weight: bold;
+  font-size: 20px;
+}
+.surligne2 {
+  color: #c56376;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+@font-face {
+  font-family: "GothamNarrow-Book";
+  src: url("./css/GothamNarrow-Book.otf") format("opentype");
+}
+body {
+  font-family: "GothamNarrow-Book", sans-serif;
+  color: #1d4764;
+}
+.btn-label {
+  position: relative;
+  text-align: center;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background: #c56376;
+  color: white;
+  z-index: 10;
+  display: inline-block;
+  line-height: 1.5;
+  font-weight: bold;
+  border-radius: 0;
+  text-decoration: none;
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+.btn-label:hover {
+  background: #f7e8d8 !important;
+  color: #c56376;
+  font-weight: bold;
+  border-radius: 0;
+  padding: 5px;
+  line-height: 1.5;
+  text-decoration: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 2px solid #c56376;
+}
+
+.bg-secondary-custom {
+  background-color: #f8e9d9 !important; /* Utilisez !important avec précaution */
+  color: #294965;
+}
+
+.p_special {
+  color: black;
+}
+
+.desktop-only {
+  display: none;
+}
+
+.color-link {
+  color: #1d4764 !important;
+}
+
+.desktop-only,
+.mobile-only {
+  display: none;
+}
+
+@media (min-width: 500px) {
+  .desktop-only {
+    display: inline;
+  }
+  .centered-text {
+    font-size: 30px;
+    width: 50%;
+    text-align: center;
+    margin: 20px auto; /* Ajustez cette marge pour contrôler l'espace entre l'icône et le texte */
+  }
+  .centered-textcenter {
+    font-size: 30px;
+    width: 50%;
+    text-align: center;
+    margin: 20px auto; /* Ajustez cette marge pour contrôler l'espace entre l'icône et le texte */
+  }
+}
+@media (max-width: 500px) {
+  .mobile-only {
+    display: inline;
+  }
+  .centered-text {
+    font-size: 20px;
+    width: 50%;
+    margin: 20px auto; /* Ajustez cette marge pour contrôler l'espace entre l'icône et le texte */
+  }
+  .centered-textcenter {
+    font-size: 20px;
+    width: 50%;
+    text-align: center;
+    margin: 20px auto; /* Ajustez cette marge pour contrôler l'espace entre l'icône et le texte */
+  }
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23c56376' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.titre {
+  font-size: 30px;
+  font-weight: bold;
+  color: #c56376;
+}
